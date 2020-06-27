@@ -16,7 +16,7 @@
         },
         "assets": {
           "attribution": "©WASAC,Ltd.",
-          "minzoom": 6,
+          "minzoom": 9,
           "maxzoom": 16,
           "tiles": [
               "https://wasac.github.io/vt-map/tiles/{z}/{x}/{y}.mvt"
@@ -6957,7 +6957,7 @@
           "type": "fill",
           "source": "assets",
           "source-layer": "wss",
-          "minzoom": 6,
+          "minzoom": 9,
           "maxzoom": 16,
           "layout": {},
           "paint": {
@@ -6975,7 +6975,7 @@
           "type": "line",
           "source": "assets",
           "source-layer": "pipeline",
-          "minzoom": 8,
+          "minzoom": 11,
           "layout": {},
           "paint": {"line-color": "hsl(240, 100%, 50%)"}
       },
