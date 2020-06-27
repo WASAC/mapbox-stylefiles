@@ -17,7 +17,7 @@
         "assets": {
           "attribution": "©WASAC,Ltd.",
           "minzoom": 6,
-          "maxzoom": 18,
+          "maxzoom": 16,
           "tiles": [
               "https://wasac.github.io/vt-map/tiles/{z}/{x}/{y}.mvt"
           ],
