@@ -226,8 +226,8 @@
             }
         }
     },
-    "center": [35.869092060810885, -1.0857266150667897],
-    "zoom": 13.39788632926911,
+    "center": [29.915923665876335, -2.00623424231469],
+    "zoom": 8.464821948189522,
     "bearing": 0,
     "pitch": 0,
     "sources": {
@@ -241,17 +241,17 @@
             "type": "vector"
         },
         "assets": {
-            "attribution": "©NARWASSCO,Ltd.",
-            "minzoom": 10,
+            "attribution": "©WASAC,Ltd.",
+            "minzoom": 6,
             "maxzoom": 18,
             "tiles": [
-                "https://narwassco.github.io/vt-map/tiles/{z}/{x}/{y}.mvt"
+                "https://wasac.github.io/vt-map/tiles/{z}/{x}/{y}.mvt"
             ],
             "type": "vector"
         }
     },
-    "sprite": "https://narwassco.github.io/sprite-create/satellite/sprite",
-    "glyphs": "mapbox://fonts/narwassco/{fontstack}/{range}.pbf",
+    "sprite": "https://wasac.github.io/sprite-create/satellite/sprite",
+    "glyphs": "mapbox://fonts/jin-igarashi/{fontstack}/{range}.pbf",
     "layers": [
         {
             "id": "background",
@@ -4754,75 +4754,21 @@
             }
         },
         {
-            "id": "village",
-            "type": "line",
-            "source": "assets",
-            "source-layer": "village",
-            "minzoom": 10,
-            "maxzoom": 17,
-            "paint": {
-                "line-width": 1.8,
-                "line-color": "hsl(118, 36%, 44%)",
-                "line-dasharray": [3, 1.5]
-            }
-        },
-        {
-            "id": "dma",
-            "type": "line",
-            "source": "assets",
-            "source-layer": "dma",
-            "minzoom": 13,
-            "maxzoom": 17,
-            "layout": {},
-            "paint": {
-                "line-color": "hsl(60, 100%, 50%)",
-                "line-dasharray": [1, 1],
-                "line-gap-width": 0.5
-            }
-        },
-        {
-            "id": "parcels",
-            "type": "line",
-            "source": "assets",
-            "source-layer": "parcels",
-            "minzoom": 16,
-            "layout": {},
-            "paint": {"line-width": 1.4, "line-color": "hsl(0, 4%, 66%)"}
-        },
-        {
-            "id": "wtp",
+            "id": "wss",
             "type": "fill",
             "source": "assets",
-            "source-layer": "plant",
-            "minzoom": 10,
-            "filter": ["match", ["get", "plant_type"], ["WTP"], true, false],
+            "source-layer": "wss",
+            "minzoom": 6,
+            "maxzoom": 16,
             "layout": {},
             "paint": {
                 "fill-color": [
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    0,
-                    "hsl(0, 5%, 83%)",
-                    22,
-                    "hsl(0, 5%, 83%)"
-                ],
-                "fill-outline-color": "rgb(0, 0, 0)",
-                "fill-opacity": 0.6
-            }
-        },
-        {
-            "id": "intake",
-            "type": "fill",
-            "source": "assets",
-            "source-layer": "plant",
-            "minzoom": 10,
-            "filter": ["match", ["get", "plant_type"], ["INTAKE"], true, false],
-            "layout": {},
-            "paint": {
-                "fill-color": "hsl(0, 18%, 85%)",
-                "fill-outline-color": "hsl(0, 8%, 6%)",
-                "fill-opacity": 0.6
+                    "match",
+                    ["get", "wss_type"],
+                    ["Pumping"],
+                    "hsla(128, 88%, 55%, 0.6)",
+                    "hsla(0, 95%, 79%, 0.6)"
+                ]
             }
         },
         {
@@ -4830,365 +4776,132 @@
             "type": "line",
             "source": "assets",
             "source-layer": "pipeline",
-            "minzoom": 10,
+            "minzoom": 8,
             "layout": {},
-            "paint": {
-                "line-color": "hsl(240, 100%, 50%)",
-                "line-width": [
+            "paint": {"line-color": "hsl(240, 100%, 50%)"}
+        },
+        {
+            "id": "watersource",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "watersource",
+            "minzoom": 12,
+            "layout": {"icon-image": "watersource"},
+            "paint": {}
+        },
+        {
+            "id": "reservoir",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "reservoir",
+            "minzoom": 12,
+            "layout": {"icon-image": "reservoir"},
+            "paint": {}
+        },
+        {
+            "id": "pumping-station",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "pumping_station",
+            "minzoom": 12,
+            "paint": {}
+        },
+        {
+            "id": "chamber",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "chamber",
+            "minzoom": 14,
+            "layout": {
+                "icon-image": [
                     "match",
-                    ["get", "pipesize"],
-                    ["DN300"],
-                    3,
-                    ["DN250"],
-                    2.5,
-                    ["DN200"],
-                    2.3,
-                    ["DN150"],
-                    2,
-                    ["DN110", "DN100"],
-                    1.7,
-                    ["DN90"],
-                    1.5,
-                    ["DN63", "DN50", "DN75"],
-                    1.3,
-                    ["DN13"],
-                    0.8,
-                    1
-                ]
-            }
-        },
-        {
-            "id": "tank",
-            "type": "fill",
-            "source": "assets",
-            "source-layer": "tank",
-            "minzoom": 13,
-            "layout": {},
-            "paint": {
-                "fill-color": "hsl(75, 99%, 91%)",
-                "fill-outline-color": "hsl(0, 99%, 0%)"
-            }
-        },
-        {
-            "id": "valve",
-            "type": "symbol",
-            "source": "assets",
-            "source-layer": "valve",
-            "minzoom": 14,
-            "layout": {
-                "icon-image": "valve",
-                "icon-size": 0.8,
-                "text-field": [
-                    "step",
-                    ["zoom"],
-                    "",
-                    16,
-                    [
-                        "concat",
-                        ["to-string", ["get", "valvetype"]],
-                        " ",
-                        ["get", "pipesize"]
-                    ]
+                    ["get", "chamber_type"],
+                    ["Valve chamber"],
+                    "valve",
+                    ["Washout chamber"],
+                    "washout",
+                    ["Air release chamber"],
+                    "air-valve",
+                    ["Break Pressure chamber"],
+                    "break-pressure-chamber",
+                    ["Collection chamber"],
+                    "collection-chamber",
+                    ["PRV chamber"],
+                    "pressure-breaking-valve",
+                    ["Starting chamber"],
+                    "starting-chamber",
+                    ""
                 ],
+                "text-field": ["to-string", ["get", "chamber_type"]],
                 "text-size": 12,
-                "text-offset": [0, 1.5],
-                "text-max-width": 6
+                "text-anchor": "left",
+                "text-offset": [1, 0]
             },
             "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
         },
         {
-            "id": "firehydrant",
+            "id": "connection",
             "type": "symbol",
             "source": "assets",
-            "source-layer": "firehydrant",
+            "source-layer": "connection",
             "minzoom": 15,
             "layout": {
-                "icon-image": "firehydrant",
-                "text-field": [
-                    "step",
-                    ["zoom"],
-                    "",
-                    16,
-                    ["to-string", ["get", "size"]]
-                ],
-                "text-size": 12,
-                "text-offset": [0, -1.2]
-            },
-            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
-        },
-        {
-            "id": "washout",
-            "type": "symbol",
-            "source": "assets",
-            "source-layer": "washout",
-            "minzoom": 15,
-            "layout": {
-                "text-field": [
-                    "step",
-                    ["zoom"],
-                    "",
-                    16,
-                    ["to-string", ["get", "size"]]
-                ],
-                "text-size": 12,
-                "text-offset": [0, 1],
-                "icon-image": "washout"
-            },
-            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
-        },
-        {
-            "id": "flow meter",
-            "type": "symbol",
-            "source": "assets",
-            "source-layer": "flowmeter",
-            "minzoom": 14,
-            "filter": [
-                "match",
-                ["get", "metertype"],
-                ["", "Customer Meter"],
-                false,
-                true
-            ],
-            "layout": {
-                "text-field": ["step", ["zoom"], "", 14, ["get", "metertype"]],
-                "text-size": 12,
-                "text-font": [
-                    "Arial Unicode MS Regular",
-                    "Arial Unicode MS Regular"
-                ],
-                "text-offset": [0, 1],
-                "icon-image": "milan-metro",
-                "text-justify": "left"
-            },
-            "paint": {
-                "text-halo-color": "#ffffff",
-                "text-halo-width": 1,
-                "text-color": "hsl(0, 0%, 0%)"
-            }
-        },
-        {
-            "id": "meter",
-            "type": "symbol",
-            "source": "assets",
-            "source-layer": "meter",
-            "minzoom": 16,
-            "filter": [
-                "match",
-                ["get", "metertype"],
-                ["", "Customer Meter"],
-                true,
-                false
-            ],
-            "layout": {
-                "text-size": 12,
-                "text-font": [
-                    "Arial Unicode MS Regular",
-                    "Arial Unicode MS Regular"
-                ],
-                "text-offset": [0, 1],
                 "icon-image": [
                     "match",
                     ["get", "status"],
-                    ["ON"],
-                    "meter_on",
-                    ["AVG"],
-                    "meter_avg",
-                    ["CO"],
-                    "meter_co",
+                    ["Full Functional"],
+                    "meter_functional",
+                    ["Partially Functional"],
+                    "meter_partially",
+                    ["Not Functional", "Abandoned"],
+                    "meter_abandoned",
                     "meter"
-                ],
-                "icon-size": 0.8,
-                "text-justify": "left",
-                "text-field": [
-                    "step",
-                    ["zoom"],
-                    "",
-                    17,
-                    [
-                        "concat",
-                        ["to-string", ["get", "connno"]],
-                        ["get", "zonecd"]
-                    ]
                 ]
             },
-            "paint": {
-                "text-halo-color": "#ffffff",
-                "text-halo-width": 1,
-                "text-color": "hsl(0, 0%, 0%)"
-            }
-        },
-        {
-            "id": "village_annotation",
-            "type": "symbol",
-            "source": "assets",
-            "source-layer": "point_annotation",
-            "minzoom": 10,
-            "maxzoom": 17,
-            "filter": ["match", ["get", "layer"], ["village"], true, false],
-            "layout": {
-                "text-field": ["to-string", ["get", "name"]],
-                "text-size": 15,
-                "text-font": [
-                    "Arial Unicode MS Bold",
-                    "Arial Unicode MS Regular"
-                ],
-                "text-max-width": 8,
-                "icon-image": "default-6",
-                "icon-text-fit": "both",
-                "icon-size": 1.2
-            },
-            "paint": {
-                "text-color": "hsl(131, 64%, 45%)",
-                "text-halo-color": "#ffffff",
-                "text-halo-width": 1.5
-            }
-        },
-        {
-            "id": "dma-annotation",
-            "type": "symbol",
-            "source": "assets",
-            "source-layer": "point_annotation",
-            "minzoom": 13,
-            "maxzoom": 17,
-            "filter": ["match", ["get", "layer"], ["dma"], true, false],
-            "layout": {
-                "icon-image": "pe-regional-4",
-                "icon-size": 1.5,
-                "text-field": ["to-string", ["get", "name"]],
-                "icon-text-fit": "both",
-                "text-font": [
-                    "Arial Unicode MS Bold",
-                    "Arial Unicode MS Regular"
-                ],
-                "text-size": 14
-            },
-            "paint": {"text-color": "hsl(34, 100%, 50%)"}
-        },
-        {
-            "id": "parcels_annotation",
-            "type": "symbol",
-            "source": "assets",
-            "source-layer": "parcels_annotation",
-            "minzoom": 17,
-            "layout": {
-                "text-field": ["to-string", ["get", "parcel_no"]],
-                "text-size": 12,
-                "symbol-avoid-edges": true
-            },
-            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
+            "paint": {}
         },
         {
             "id": "pipeline_annotation",
             "type": "symbol",
             "source": "assets",
             "source-layer": "pipeline",
-            "minzoom": 16,
+            "minzoom": 14,
             "layout": {
                 "text-field": [
-                    "step",
-                    ["zoom"],
-                    "",
-                    16,
-                    [
-                        "concat",
-                        ["to-string", ["get", "pipesize"]],
-                        " ",
-                        ["get", "material"]
-                    ]
+                    "concat",
+                    "DN",
+                    ["get", "pipe_size"],
+                    " ",
+                    ["get", "material"],
+                    " ",
+                    ["get", "construction_year"]
                 ],
-                "symbol-placement": "line",
-                "text-size": 12
-            },
-            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1.5}
-        },
-        {
-            "id": "intake_annotation",
-            "type": "symbol",
-            "source": "assets",
-            "source-layer": "point_annotation",
-            "minzoom": 10,
-            "filter": ["match", ["get", "layer"], ["intake"], true, false],
-            "layout": {
-                "text-field": ["to-string", ["get", "name"]],
-                "text-size": 12,
-                "text-max-width": 7
+                "symbol-placement": "line-center",
+                "text-size": 14
             },
             "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
         },
         {
-            "id": "tank_annotation",
+            "id": "wss-annotation",
             "type": "symbol",
             "source": "assets",
-            "source-layer": "point_annotation",
-            "minzoom": 13,
-            "filter": ["match", ["get", "layer"], ["tank"], true, false],
-            "layout": {
-                "text-field": ["to-string", ["get", "name"]],
-                "text-font": [
-                    "Arial Unicode MS Regular",
-                    "Arial Unicode MS Regular"
-                ],
-                "text-size": 13
-            },
-            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
-        },
-        {
-            "id": "narwassco-annotation",
-            "type": "symbol",
-            "source": "assets",
-            "source-layer": "point_annotation",
+            "source-layer": "wss_annotation",
             "minzoom": 10,
-            "filter": ["match", ["get", "layer"], ["NARWASSCO"], true, false],
+            "maxzoom": 16,
             "layout": {
-                "text-field": ["to-string", ["get", "name"]],
-                "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
+                "text-field": ["to-string", ["get", "wss_name"]],
                 "text-size": 12,
-                "text-max-width": 8,
-                "icon-image": "dot-9",
-                "icon-size": 2,
-                "text-offset": [0, 1.2]
-            },
-            "paint": {
-                "text-halo-color": "hsl(0, 0%, 100%)",
-                "text-halo-width": 1.5
-            }
-        },
-        {
-            "id": "wtp_annotation",
-            "type": "symbol",
-            "source": "assets",
-            "source-layer": "point_annotation",
-            "minzoom": 10,
-            "filter": ["match", ["get", "layer"], ["wtp"], true, false],
-            "layout": {
-                "text-field": [
-                    "step",
-                    ["zoom"],
-                    ["get", "name"],
-                    22,
-                    ["get", "name"]
-                ],
-                "text-font": [
-                    "Arial Unicode MS Bold",
-                    "Arial Unicode MS Regular"
-                ],
-                "text-size": 12,
-                "icon-image": "rectangle-yellow-6",
                 "icon-text-fit": "both",
                 "icon-size": 1.2,
-                "text-max-width": 7
+                "icon-image": "rectangle-yellow-6"
             },
-            "paint": {
-                "text-halo-color": "hsla(0, 0%, 100%, 0)",
-                "text-halo-width": 1,
-                "text-color": "hsl(0, 89%, 52%)"
-            }
+            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
         }
     ],
-    "created": "2020-05-03T20:37:18.111Z",
-    "id": "ck9ringpx01bk1iq8q4xvknjx",
-    "modified": "2020-05-22T14:46:21.114Z",
-    "owner": "narwassco",
+    "created": "2020-06-21T12:57:18.818Z",
+    "id": "ckbp2snlw08oa1iqp9n3pyqos",
+    "modified": "2020-06-27T03:48:07.552Z",
+    "owner": "wasac",
     "visibility": "private",
     "draft": false
 }
