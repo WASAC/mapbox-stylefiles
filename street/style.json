@@ -6412,6 +6412,7 @@
             "type": "symbol",
             "source": "assets",
             "source-layer": "pumping_station",
+            "layout": {"icon-image": "pump"},
             "minzoom": 12,
             "paint": {}
         },
