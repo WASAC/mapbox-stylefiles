@@ -16,8 +16,8 @@
         },
         "assets": {
           "attribution": "©WASAC,Ltd.",
-          "minzoom": 9,
-          "maxzoom": 15,
+          "minzoom": 8,
+          "maxzoom": 14,
           "tiles": [
               "https://wasac.github.io/vt-map/tiles/{z}/{x}/{y}.mvt"
           ],
@@ -6953,149 +6953,252 @@
             "type": "circle"
         },
         {
-          "id": "wss",
-          "type": "fill",
-          "source": "assets",
-          "source-layer": "wss",
-          "minzoom": 9,
-          "maxzoom": 16,
-          "layout": {},
-          "paint": {
-              "fill-color": [
-                  "match",
-                  ["get", "wss_type"],
-                  ["Pumping"],
-                  "hsla(128, 88%, 55%, 0.6)",
-                  "hsla(0, 95%, 79%, 0.6)"
-              ]
-          }
-      },
-      {
-          "id": "pipeline",
-          "type": "line",
-          "source": "assets",
-          "source-layer": "pipeline",
-          "minzoom": 11,
-          "layout": {},
-          "paint": {"line-color": "hsl(240, 100%, 50%)"}
-      },
-      {
-          "id": "watersource",
-          "type": "symbol",
-          "source": "assets",
-          "source-layer": "watersource",
-          "minzoom": 12,
-          "layout": {"icon-image": "watersource"},
-          "paint": {}
-      },
-      {
-          "id": "reservoir",
-          "type": "symbol",
-          "source": "assets",
-          "source-layer": "reservoir",
-          "minzoom": 12,
-          "layout": {"icon-image": "reservoir"},
-          "paint": {}
-      },
-      {
-          "id": "pumping-station",
-          "type": "symbol",
-          "source": "assets",
-          "source-layer": "pumping_station",
-          "layout": {"icon-image": "pump"},
-          "minzoom": 12,
-          "paint": {}
-      },
-      {
-          "id": "chamber",
-          "type": "symbol",
-          "source": "assets",
-          "source-layer": "chamber",
-          "minzoom": 14,
-          "layout": {
-              "icon-image": [
-                  "match",
-                  ["get", "chamber_type"],
-                  ["Valve chamber"],
-                  "valve",
-                  ["Washout chamber"],
-                  "washout",
-                  ["Air release chamber"],
-                  "air-valve",
-                  ["Break Pressure chamber"],
-                  "break-pressure-chamber",
-                  ["Collection chamber"],
-                  "collection-chamber",
-                  ["PRV chamber"],
-                  "pressure-breaking-valve",
-                  ["Starting chamber"],
-                  "starting-chamber",
-                  ""
-              ],
-              "text-field": ["to-string", ["get", "chamber_type"]],
-              "text-size": 12,
-              "text-anchor": "left",
-              "text-offset": [1, 0]
-          },
-          "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
-      },
-      {
-          "id": "connection",
-          "type": "symbol",
-          "source": "assets",
-          "source-layer": "connection",
-          "minzoom": 15,
-          "layout": {
-              "icon-image": [
-                  "match",
-                  ["get", "status"],
-                  ["Full Functional"],
-                  "meter_functional",
-                  ["Partially Functional"],
-                  "meter_partially",
-                  ["Not Functional", "Abandoned"],
-                  "meter_abandoned",
-                  "meter"
-              ]
-          },
-          "paint": {}
-      },
-      {
-          "id": "pipeline_annotation",
-          "type": "symbol",
-          "source": "assets",
-          "source-layer": "pipeline",
-          "minzoom": 14,
-          "layout": {
-              "text-field": [
-                  "concat",
-                  "DN",
-                  ["get", "pipe_size"],
-                  " ",
-                  ["get", "material"],
-                  " ",
-                  ["get", "construction_year"]
-              ],
-              "symbol-placement": "line-center",
-              "text-size": 14
-          },
-          "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
-      },
-      {
-          "id": "wss-annotation",
-          "type": "symbol",
-          "source": "assets",
-          "source-layer": "wss_annotation",
-          "minzoom": 10,
-          "maxzoom": 16,
-          "layout": {
-              "text-field": ["to-string", ["get", "wss_name"]],
-              "text-size": 12,
-              "icon-text-fit": "both",
-              "icon-size": 1.2,
-              "icon-image": "rectangle-yellow-6"
-          },
-          "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
-      }
+            "id": "village",
+            "type": "line",
+            "source": "assets",
+            "source-layer": "village",
+            "minzoom": 14,
+            "layout": {},
+            "paint": {"line-dasharray": [2, 3], "line-width": 2}
+        },
+        {
+            "id": "cell",
+            "type": "line",
+            "source": "assets",
+            "source-layer": "cell",
+            "minzoom": 13,
+            "layout": {},
+            "paint": {"line-color": "hsl(0, 0%, 0%)", "line-width": 2}
+        },
+        {
+            "id": "sector",
+            "type": "line",
+            "source": "assets",
+            "source-layer": "sector",
+            "minzoom": 10,
+            "layout": {},
+            "paint": {
+                "line-color": "rgb(179, 0, 0)",
+                "line-width": 2.5,
+                "line-dasharray": [2, 3]
+            }
+        },
+        {
+            "id": "district",
+            "type": "line",
+            "source": "assets",
+            "source-layer": "district",
+            "minzoom": 8,
+            "layout": {},
+            "paint": {"line-width": 3}
+        },
+        {
+            "id": "wss",
+            "type": "fill",
+            "source": "assets",
+            "source-layer": "wss",
+            "minzoom": 6,
+            "maxzoom": 16,
+            "layout": {},
+            "paint": {
+                "fill-color": [
+                    "match",
+                    ["get", "wss_type"],
+                    ["Pumping"],
+                    "hsla(128, 88%, 55%, 0.6)",
+                    "hsla(0, 95%, 79%, 0.6)"
+                ]
+            }
+        },
+        {
+            "id": "pipeline",
+            "type": "line",
+            "source": "assets",
+            "source-layer": "pipeline",
+            "minzoom": 10,
+            "layout": {},
+            "paint": {"line-color": "hsl(240, 100%, 50%)"}
+        },
+        {
+            "id": "watersource",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "watersource",
+            "minzoom": 12,
+            "layout": {"icon-image": "watersource"},
+            "paint": {}
+        },
+        {
+            "id": "reservoir",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "reservoir",
+            "minzoom": 12,
+            "layout": {"icon-image": "reservoir"},
+            "paint": {}
+        },
+        {
+            "id": "pumping-station",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "pumping_station",
+            "minzoom": 12,
+            "layout": {"icon-image": "pump"},
+            "paint": {}
+        },
+        {
+            "id": "chamber",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "chamber",
+            "minzoom": 14,
+            "layout": {
+                "icon-image": [
+                    "match",
+                    ["get", "chamber_type"],
+                    ["Valve chamber"],
+                    "valve",
+                    ["Washout chamber"],
+                    "washout",
+                    ["Air release chamber"],
+                    "air-valve",
+                    ["Break Pressure chamber"],
+                    "break-pressure-chamber",
+                    ["Collection chamber"],
+                    "collection-chamber",
+                    ["PRV chamber"],
+                    "pressure-breaking-valve",
+                    ["Starting chamber"],
+                    "starting-chamber",
+                    ""
+                ],
+                "text-field": ["to-string", ["get", "chamber_type"]],
+                "text-size": 12,
+                "text-anchor": "left",
+                "text-offset": [1, 0]
+            },
+            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
+        },
+        {
+            "id": "connection",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "connection",
+            "minzoom": 15,
+            "layout": {
+                "icon-image": [
+                    "match",
+                    ["get", "status"],
+                    ["Full Functional"],
+                    "meter_functional",
+                    ["Partially Functional"],
+                    "meter_partially",
+                    ["Not Functional", "Abandoned"],
+                    "meter_abandoned",
+                    "meter"
+                ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "pipeline_annotation",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "pipeline",
+            "minzoom": 14,
+            "layout": {
+                "text-field": [
+                    "concat",
+                    "DN",
+                    ["get", "pipe_size"],
+                    " ",
+                    ["get", "material"],
+                    " ",
+                    ["get", "construction_year"]
+                ],
+                "symbol-placement": "line-center",
+                "text-size": 14
+            },
+            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
+        },
+        {
+            "id": "district-annotation",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "district_annotation",
+            "minzoom": 8,
+            "maxzoom": 11,
+            "layout": {
+                "text-field": ["to-string", ["get", "district"]],
+                "text-font": ["Open Sans Bold", "Arial Unicode MS Regular"]
+            },
+            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
+        },
+        {
+            "id": "sector-annotation",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "sector_annotation",
+            "minzoom": 10,
+            "maxzoom": 14,
+            "layout": {
+                "text-field": ["to-string", ["get", "sector"]],
+                "text-size": 14,
+                "text-font": ["Open Sans Bold", "Arial Unicode MS Regular"]
+            },
+            "paint": {
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 1,
+                "text-color": "hsl(0, 77%, 47%)"
+            }
+        },
+        {
+            "id": "cell-annotation",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "cell_annotation",
+            "minzoom": 13,
+            "maxzoom": 15,
+            "layout": {
+                "text-field": ["to-string", ["get", "cell"]],
+                "text-size": 13,
+                "text-font": ["Open Sans Bold", "Arial Unicode MS Regular"]
+            },
+            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
+        },
+        {
+            "id": "village-annotation",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "village_annotation",
+            "minzoom": 14,
+            "maxzoom": 16,
+            "layout": {
+                "text-field": ["to-string", ["get", "village"]],
+                "text-size": 13,
+                "text-font": [
+                    "Open Sans SemiBold Italic",
+                    "Arial Unicode MS Regular"
+                ]
+            },
+            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
+        },
+        {
+            "id": "wss-annotation",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "wss_annotation",
+            "minzoom": 11,
+            "maxzoom": 15,
+            "layout": {
+                "text-field": ["to-string", ["get", "wss_name"]],
+                "text-size": 12,
+                "icon-text-fit": "both",
+                "icon-size": 1.2,
+                "icon-image": "rectangle-yellow-6",
+                "text-font": ["Open Sans Bold", "Arial Unicode MS Regular"]
+            },
+            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
+        }
     ]
 }
