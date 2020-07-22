@@ -18,7 +18,7 @@ git clone https://github.com/wasac/mapbox-satellite-icons.git
 
 ### Install & Generate Sprite files
 ```
-git clone https://github.com/narwassco/mapbox-stylefiles.git
+git clone https://github.com/wasac/mapbox-stylefiles.git
 cd mapbox-stylefiles
 npm i
 npm run sprite
