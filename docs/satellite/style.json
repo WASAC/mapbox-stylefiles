@@ -259,7 +259,7 @@
             "type": "vector"
         }
     },
-    "sprite": "https://wasac.github.io/sprite-create/satellite/sprite",
+    "sprite": "https://wasac.github.io/mapbox-stylefiles/satellite/sprite/sprite",
     "glyphs": "mapbox://fonts/jin-igarashi/{fontstack}/{range}.pbf",
     "layers": [
         {

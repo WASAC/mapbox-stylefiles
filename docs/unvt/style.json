@@ -24,7 +24,7 @@
           "type": "vector"
       }
     },
-    "sprite": "https://wasac.github.io/sprite-create/sprite/sprite",
+    "sprite": "https://wasac.github.io/mapbox-stylefiles/unvt/sprite/sprite",
     "glyphs": "https://optgeo.github.io/kokoromi-rw/font/{fontstack}/{range}.pbf",
     "layers": [
         {
@@ -7073,6 +7073,9 @@
                     ""
                 ],
                 "text-field": ["to-string", ["get", "chamber_type"]],
+                "text-font": [
+                  "sans"
+                ],
                 "text-size": 12,
                 "text-anchor": "left",
                 "text-offset": [1, 0]
@@ -7116,6 +7119,9 @@
                     " ",
                     ["get", "construction_year"]
                 ],
+                "text-font": [
+                  "sans"
+                ],
                 "symbol-placement": "line-center",
                 "text-size": 14
             },
@@ -7130,7 +7136,9 @@
             "maxzoom": 11,
             "layout": {
                 "text-field": ["to-string", ["get", "district"]],
-                "text-font": ["Open Sans Bold", "Arial Unicode MS Regular"]
+                "text-font": [
+                  "sans"
+                ]
             },
             "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
         },
@@ -7144,7 +7152,9 @@
             "layout": {
                 "text-field": ["to-string", ["get", "sector"]],
                 "text-size": 14,
-                "text-font": ["Open Sans Bold", "Arial Unicode MS Regular"]
+                "text-font": [
+                  "sans"
+                ]
             },
             "paint": {
                 "text-halo-color": "#ffffff",
@@ -7162,7 +7172,9 @@
             "layout": {
                 "text-field": ["to-string", ["get", "cell"]],
                 "text-size": 13,
-                "text-font": ["Open Sans Bold", "Arial Unicode MS Regular"]
+                "text-font": [
+                  "sans"
+                ]
             },
             "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
         },
@@ -7177,8 +7189,7 @@
                 "text-field": ["to-string", ["get", "village"]],
                 "text-size": 13,
                 "text-font": [
-                    "Open Sans SemiBold Italic",
-                    "Arial Unicode MS Regular"
+                  "sans"
                 ]
             },
             "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
@@ -7196,8 +7207,10 @@
                 "icon-text-fit": "both",
                 "icon-size": 1.2,
                 "icon-image": "rectangle-yellow-6",
-                "text-font": ["Open Sans Bold", "Arial Unicode MS Regular"]
-            },
+                "text-font": [
+                  "sans"
+                ]
+            }, 
             "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
         }
     ]
