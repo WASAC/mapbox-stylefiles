@@ -4890,11 +4890,24 @@
             "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
         },
         {
-            "id": "connection",
+            "id": "other connection",
             "type": "symbol",
             "source": "assets",
             "source-layer": "connection",
             "minzoom": 15,
+            "filter": [
+                "match",
+                ["get", "connection_type"],
+                [
+                    "Household",
+                    "Industrial",
+                    "Public Tap",
+                    "Water Kiosk",
+                    "Institution"
+                ],
+                false,
+                true
+            ],
             "layout": {
                 "icon-image": [
                     "match",
@@ -4906,6 +4919,146 @@
                     ["Not Functional", "Abandoned"],
                     "meter_abandoned",
                     "meter"
+                ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "household",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "connection",
+            "minzoom": 15,
+            "filter": [
+                "match",
+                ["get", "connection_type"],
+                ["Household"],
+                true,
+                false
+            ],
+            "layout": {
+                "icon-image": [
+                    "match",
+                    ["get", "status"],
+                    ["Full Functional"],
+                    "household_functional",
+                    ["Partially Functional"],
+                    "household_partially",
+                    ["Not Functional", "Abandoned"],
+                    "household_abandoned",
+                    "household"
+                ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "publictap",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "connection",
+            "minzoom": 15,
+            "filter": [
+                "match",
+                ["get", "connection_type"],
+                ["Public Tap"],
+                true,
+                false
+            ],
+            "layout": {
+                "icon-image": [
+                    "match",
+                    ["get", "status"],
+                    ["Full Functional"],
+                    "publictap_functional",
+                    ["Partially Functional"],
+                    "publictap_partially",
+                    ["Not Functional", "Abandoned"],
+                    "publictap_abandoned",
+                    "publictap"
+                ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "waterkiosk",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "connection",
+            "minzoom": 15,
+            "filter": [
+                "match",
+                ["get", "connection_type"],
+                ["Water Kiosk"],
+                true,
+                false
+            ],
+            "layout": {
+                "icon-image": [
+                    "match",
+                    ["get", "status"],
+                    ["Full Functional"],
+                    "waterkiosk_functional",
+                    ["Partially Functional"],
+                    "waterkiosk_partially",
+                    ["Not Functional", "Abandoned"],
+                    "waterkiosk_abandoned",
+                    "waterkiosk"
+                ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "industrial",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "connection",
+            "minzoom": 15,
+            "filter": [
+                "match",
+                ["get", "connection_type"],
+                ["Industrial"],
+                true,
+                false
+            ],
+            "layout": {
+                "icon-image": [
+                    "match",
+                    ["get", "status"],
+                    ["Full Functional"],
+                    "industrial_functional",
+                    ["Partially Functional"],
+                    "industrial_partially",
+                    ["Not Functional", "Abandoned"],
+                    "industrial_abandoned",
+                    "industrial"
+                ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "institution",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "connection",
+            "minzoom": 15,
+            "filter": [
+                "match",
+                ["get", "connection_type"],
+                ["Institution"],
+                true,
+                false
+            ],
+            "layout": {
+                "icon-image": [
+                    "match",
+                    ["get", "status"],
+                    ["Full Functional"],
+                    "institution_functional",
+                    ["Partially Functional"],
+                    "institution_partially",
+                    ["Not Functional", "Abandoned"],
+                    "institution_abandoned",
+                    "institution"
                 ]
             },
             "paint": {}
