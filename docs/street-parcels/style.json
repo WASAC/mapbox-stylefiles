@@ -315,7 +315,7 @@
             "minzoom": 15,
             "maxzoom": 15,
             "tiles": [
-                "https://vt-parcels.netlify.app/tiles/{z}/{x}/{y}.mvt"
+                "https://vt-parcels.netlify.app/tiles/{z}/{x}/{y}.pbf"
             ],
             "type": "vector"
         }
