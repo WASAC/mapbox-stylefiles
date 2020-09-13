@@ -311,7 +311,7 @@
             "type": "vector"
         },
         "parcels": {
-            "attribution": "©WASAC,Ltd.",
+            "attribution": "©Rwanda Land Management and Use Authority(RLMUA)",
             "minzoom": 15,
             "maxzoom": 15,
             "tiles": [
