@@ -5068,7 +5068,7 @@
             "type": "symbol",
             "source": "assets",
             "source-layer": "water_points",
-            "minzoom": 13,
+            "minzoom": 12,
             "filter": [
               "match",
               ["get", "wsf_type"],
@@ -5096,7 +5096,7 @@
             "type": "symbol",
             "source": "assets",
             "source-layer": "water_points",
-            "minzoom": 13,
+            "minzoom": 12,
             "filter": [
               "match",
               ["get", "wsf_type"],
@@ -5124,7 +5124,7 @@
             "type": "symbol",
             "source": "assets",
             "source-layer": "water_points",
-            "minzoom": 13,
+            "minzoom": 12,
             "filter": [
               "match",
               ["get", "wsf_type"],
@@ -5152,7 +5152,7 @@
             "type": "symbol",
             "source": "assets",
             "source-layer": "water_points",
-            "minzoom": 13,
+            "minzoom": 12,
             "filter": [
               "match",
               ["get", "wsf_type"],
@@ -5180,7 +5180,7 @@
             "type": "symbol",
             "source": "assets",
             "source-layer": "water_points",
-            "minzoom": 15,
+            "minzoom": 12,
             "filter": [
                 "match",
                 ["get", "wsf_type"],

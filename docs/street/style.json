@@ -6398,19 +6398,19 @@
             "type": "line",
             "source": "parcels",
             "source-layer": "parcels",
-            "minzoom": 15,
+            "minzoom": 16,
             "layout": {},
-            "paint": {"line-width": 0.8, "line-color": "hsl(0, 0%, 0%)"}
+            "paint": {"line-width": 0.3, "line-color": "rgba(131, 131, 131, 1)"}
         },
         {
             "id": "parcels_annotation",
             "type": "symbol",
             "source": "parcels",
             "source-layer": "parcels_annotation",
-            "minzoom": 16,
+            "minzoom": 18,
             "layout": {
                 "text-field": ["to-string", ["get", "parcel_no"]],
-                "text-size": 10,
+                "text-size": 9,
                 "symbol-avoid-edges": true
             },
             "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
@@ -6681,7 +6681,7 @@
             "type": "symbol",
             "source": "assets",
             "source-layer": "water_points",
-            "minzoom": 13,
+            "minzoom": 12,
             "filter": [
               "match",
               ["get", "wsf_type"],
@@ -6709,7 +6709,7 @@
             "type": "symbol",
             "source": "assets",
             "source-layer": "water_points",
-            "minzoom": 13,
+            "minzoom": 12,
             "filter": [
               "match",
               ["get", "wsf_type"],
@@ -6737,7 +6737,7 @@
             "type": "symbol",
             "source": "assets",
             "source-layer": "water_points",
-            "minzoom": 13,
+            "minzoom": 12,
             "filter": [
               "match",
               ["get", "wsf_type"],
@@ -6765,7 +6765,7 @@
             "type": "symbol",
             "source": "assets",
             "source-layer": "water_points",
-            "minzoom": 13,
+            "minzoom": 12,
             "filter": [
               "match",
               ["get", "wsf_type"],
@@ -6793,7 +6793,7 @@
             "type": "symbol",
             "source": "assets",
             "source-layer": "water_points",
-            "minzoom": 15,
+            "minzoom": 12,
             "filter": [
                 "match",
                 ["get", "wsf_type"],
