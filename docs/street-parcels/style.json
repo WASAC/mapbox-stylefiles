@@ -6666,6 +6666,151 @@
             "paint": {}
         },
         {
+            "id": "handpump",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "water_points",
+            "minzoom": 13,
+            "filter": [
+              "match",
+              ["get", "wsf_type"],
+              ["Hand Pump"],
+              true,
+              false
+            ],
+            "layout": {
+              "icon-image": [
+                "match",
+                ["get", "status"],
+                ["Full Functional"],
+                "handpump_functional",
+                ["Partially Functional"],
+                "handpump_partially",
+                ["Not Functional", "Abandoned"],
+                "handpump_abandoned",
+                "handpump"
+              ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "improvedspring",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "water_points",
+            "minzoom": 13,
+            "filter": [
+              "match",
+              ["get", "wsf_type"],
+              ["Improved Spring"],
+              true,
+              false
+            ],
+            "layout": {
+              "icon-image": [
+                "match",
+                ["get", "status"],
+                ["Full Functional"],
+                "improvedspring_functional",
+                ["Partially Functional"],
+                "improvedspring_partially",
+                ["Not Functional", "Abandoned"],
+                "improvedspring_abandoned",
+                "improvedspring"
+              ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "dugwell",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "water_points",
+            "minzoom": 13,
+            "filter": [
+              "match",
+              ["get", "wsf_type"],
+              ["Dug well"],
+              true,
+              false
+            ],
+            "layout": {
+              "icon-image": [
+                "match",
+                ["get", "status"],
+                ["Full Functional"],
+                "dugwell_functional",
+                ["Partially Functional"],
+                "dugwell_partially",
+                ["Not Functional", "Abandoned"],
+                "dugwell_abandoned",
+                "dugwell"
+              ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "solarpump",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "water_points",
+            "minzoom": 13,
+            "filter": [
+              "match",
+              ["get", "wsf_type"],
+              ["Solar Pump"],
+              true,
+              false
+            ],
+            "layout": {
+              "icon-image": [
+                "match",
+                ["get", "status"],
+                ["Full Functional"],
+                "solarpump_functional",
+                ["Partially Functional"],
+                "solarpump_partially",
+                ["Not Functional", "Abandoned"],
+                "solarpump_abandoned",
+                "solarpump"
+              ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "otherwaterpoint",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "connection",
+            "minzoom": 15,
+            "filter": [
+                "match",
+                ["get", "wsf_type"],
+                [
+                    "Hand Pump",
+                    "Improved Spring",
+                    "Dug well",
+                    "Solar Pump"
+                ],
+                false,
+                true
+            ],
+            "layout": {
+                "icon-image": [
+                    "match",
+                    ["get", "status"],
+                    ["Full Functional"],
+                    "otherwaterpoint_functional",
+                    ["Partially Functional"],
+                    "otherwaterpoint_partially",
+                    ["Not Functional", "Abandoned"],
+                    "otherwaterpoint_abandoned",
+                    "otherwaterpoint"
+                ]
+            },
+            "paint": {}
+        },
+        {
             "id": "parcels_annotation",
             "type": "symbol",
             "source": "parcels",
