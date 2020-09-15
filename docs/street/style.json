@@ -6403,6 +6403,19 @@
             "paint": {"line-width": 0.8, "line-color": "hsl(0, 0%, 0%)"}
         },
         {
+            "id": "parcels_annotation",
+            "type": "symbol",
+            "source": "parcels",
+            "source-layer": "parcels_annotation",
+            "minzoom": 16,
+            "layout": {
+                "text-field": ["to-string", ["get", "parcel_no"]],
+                "text-size": 10,
+                "symbol-avoid-edges": true
+            },
+            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
+        },
+        {
             "id": "wss",
             "type": "fill",
             "source": "assets",
@@ -6807,19 +6820,6 @@
                 ]
             },
             "paint": {}
-        },
-        {
-            "id": "parcels_annotation",
-            "type": "symbol",
-            "source": "parcels",
-            "source-layer": "parcels_annotation",
-            "minzoom": 16,
-            "layout": {
-                "text-field": ["to-string", ["get", "parcel_no"]],
-                "text-size": 10,
-                "symbol-avoid-edges": true
-            },
-            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
         },
         {
             "id": "pipeline_annotation",
