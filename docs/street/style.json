@@ -665,6 +665,7 @@
             "source": "composite",
             "source-layer": "contour",
             "minzoom": 11,
+            "maxzoom": 17,
             "filter": ["!=", ["get", "index"], -1],
             "layout": {},
             "paint": {
@@ -6400,14 +6401,14 @@
             "source-layer": "parcels",
             "minzoom": 16,
             "layout": {},
-            "paint": {"line-width": 0.3, "line-color": "rgba(131, 131, 131, 1)"}
+            "paint": {"line-width": 0.5, "line-color": "rgba(131, 131, 131, 1)"}
         },
         {
             "id": "parcels_annotation",
             "type": "symbol",
             "source": "parcels",
             "source-layer": "parcels_annotation",
-            "minzoom": 18,
+            "minzoom": 17.5,
             "layout": {
                 "text-field": ["to-string", ["get", "parcel_no"]],
                 "text-size": 9,
@@ -6428,8 +6429,8 @@
                     "match",
                     ["get", "wss_type"],
                     ["Pumping"],
-                    "hsla(128, 88%, 55%, 0.6)",
-                    "hsla(0, 95%, 79%, 0.6)"
+                    "hsla(128, 88%, 55%, 0.4)",
+                    "hsla(0, 95%, 79%, 0.4)"
                 ]
             }
         },
