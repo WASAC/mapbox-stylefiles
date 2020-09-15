@@ -7390,7 +7390,7 @@
             "id": "otherwaterpoint",
             "type": "symbol",
             "source": "assets",
-            "source-layer": "connection",
+            "source-layer": "water_points",
             "minzoom": 15,
             "filter": [
                 "match",
