@@ -4479,6 +4479,7 @@
             "source": "composite",
             "source-layer": "contour",
             "minzoom": 11,
+            "maxzoom": 17,
             "filter": [
                 "any",
                 ["==", ["get", "index"], 10],
