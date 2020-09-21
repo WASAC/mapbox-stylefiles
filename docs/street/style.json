@@ -310,10 +310,10 @@
         },
         "parcels": {
             "attribution": "©Rwanda Land Management and Use Authority(RLMUA)",
-            "minzoom": 15,
-            "maxzoom": 15,
+            "minzoom": 16,
+            "maxzoom": 16,
             "tiles": [
-                "https://vt-parcels.netlify.app/tiles/{z}/{x}/{y}.pbf"
+                "https://vt-parcels-2020.netlify.app/tiles/{z}/{x}/{y}.pbf"
             ],
             "type": "vector"
         }
