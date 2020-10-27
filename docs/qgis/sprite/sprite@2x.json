@@ -1,0 +1,415 @@
+{
+  "pe-regional-4": {
+    "width": 56,
+    "height": 44,
+    "x": 0,
+    "y": 0,
+    "pixelRatio": 2
+  },
+  "air-valve": {
+    "width": 32,
+    "height": 32,
+    "x": 56,
+    "y": 0,
+    "pixelRatio": 2
+  },
+  "break-pressure-chamber": {
+    "width": 32,
+    "height": 32,
+    "x": 0,
+    "y": 44,
+    "pixelRatio": 2
+  },
+  "chamber": {
+    "width": 32,
+    "height": 32,
+    "x": 32,
+    "y": 44,
+    "pixelRatio": 2
+  },
+  "collection-chamber": {
+    "width": 32,
+    "height": 32,
+    "x": 64,
+    "y": 44,
+    "pixelRatio": 2
+  },
+  "dugwell": {
+    "width": 32,
+    "height": 32,
+    "x": 0,
+    "y": 76,
+    "pixelRatio": 2
+  },
+  "dugwell_abandoned": {
+    "width": 32,
+    "height": 32,
+    "x": 32,
+    "y": 76,
+    "pixelRatio": 2
+  },
+  "dugwell_functional": {
+    "width": 32,
+    "height": 32,
+    "x": 64,
+    "y": 76,
+    "pixelRatio": 2
+  },
+  "dugwell_partially": {
+    "width": 32,
+    "height": 32,
+    "x": 0,
+    "y": 108,
+    "pixelRatio": 2
+  },
+  "firehydrant": {
+    "width": 32,
+    "height": 32,
+    "x": 32,
+    "y": 108,
+    "pixelRatio": 2
+  },
+  "handpump": {
+    "width": 32,
+    "height": 32,
+    "x": 64,
+    "y": 108,
+    "pixelRatio": 2
+  },
+  "handpump_abandoned": {
+    "width": 32,
+    "height": 32,
+    "x": 0,
+    "y": 140,
+    "pixelRatio": 2
+  },
+  "handpump_functional": {
+    "width": 32,
+    "height": 32,
+    "x": 32,
+    "y": 140,
+    "pixelRatio": 2
+  },
+  "handpump_partially": {
+    "width": 32,
+    "height": 32,
+    "x": 64,
+    "y": 140,
+    "pixelRatio": 2
+  },
+  "household": {
+    "width": 32,
+    "height": 32,
+    "x": 96,
+    "y": 44,
+    "pixelRatio": 2
+  },
+  "household_abandoned": {
+    "width": 32,
+    "height": 32,
+    "x": 128,
+    "y": 44,
+    "pixelRatio": 2
+  },
+  "household_functional": {
+    "width": 32,
+    "height": 32,
+    "x": 160,
+    "y": 44,
+    "pixelRatio": 2
+  },
+  "household_partially": {
+    "width": 32,
+    "height": 32,
+    "x": 192,
+    "y": 44,
+    "pixelRatio": 2
+  },
+  "improvedspring": {
+    "width": 32,
+    "height": 32,
+    "x": 96,
+    "y": 76,
+    "pixelRatio": 2
+  },
+  "improvedspring_abandoned": {
+    "width": 32,
+    "height": 32,
+    "x": 128,
+    "y": 76,
+    "pixelRatio": 2
+  },
+  "improvedspring_functional": {
+    "width": 32,
+    "height": 32,
+    "x": 160,
+    "y": 76,
+    "pixelRatio": 2
+  },
+  "improvedspring_partially": {
+    "width": 32,
+    "height": 32,
+    "x": 192,
+    "y": 76,
+    "pixelRatio": 2
+  },
+  "industrial": {
+    "width": 32,
+    "height": 32,
+    "x": 96,
+    "y": 108,
+    "pixelRatio": 2
+  },
+  "industrial_abandoned": {
+    "width": 32,
+    "height": 32,
+    "x": 128,
+    "y": 108,
+    "pixelRatio": 2
+  },
+  "industrial_functional": {
+    "width": 32,
+    "height": 32,
+    "x": 160,
+    "y": 108,
+    "pixelRatio": 2
+  },
+  "industrial_partially": {
+    "width": 32,
+    "height": 32,
+    "x": 192,
+    "y": 108,
+    "pixelRatio": 2
+  },
+  "institution": {
+    "width": 32,
+    "height": 32,
+    "x": 96,
+    "y": 140,
+    "pixelRatio": 2
+  },
+  "institution_abandoned": {
+    "width": 32,
+    "height": 32,
+    "x": 128,
+    "y": 140,
+    "pixelRatio": 2
+  },
+  "institution_functional": {
+    "width": 32,
+    "height": 32,
+    "x": 160,
+    "y": 140,
+    "pixelRatio": 2
+  },
+  "institution_partially": {
+    "width": 32,
+    "height": 32,
+    "x": 192,
+    "y": 140,
+    "pixelRatio": 2
+  },
+  "meter": {
+    "width": 32,
+    "height": 32,
+    "x": 88,
+    "y": 0,
+    "pixelRatio": 2
+  },
+  "meter_abandoned": {
+    "width": 32,
+    "height": 32,
+    "x": 120,
+    "y": 0,
+    "pixelRatio": 2
+  },
+  "meter_functional": {
+    "width": 32,
+    "height": 32,
+    "x": 152,
+    "y": 0,
+    "pixelRatio": 2
+  },
+  "meter_partially": {
+    "width": 32,
+    "height": 32,
+    "x": 184,
+    "y": 0,
+    "pixelRatio": 2
+  },
+  "otherwaterpoint": {
+    "width": 32,
+    "height": 32,
+    "x": 0,
+    "y": 172,
+    "pixelRatio": 2
+  },
+  "otherwaterpoint_abandoned": {
+    "width": 32,
+    "height": 32,
+    "x": 32,
+    "y": 172,
+    "pixelRatio": 2
+  },
+  "otherwaterpoint_functional": {
+    "width": 32,
+    "height": 32,
+    "x": 64,
+    "y": 172,
+    "pixelRatio": 2
+  },
+  "otherwaterpoint_partially": {
+    "width": 32,
+    "height": 32,
+    "x": 96,
+    "y": 172,
+    "pixelRatio": 2
+  },
+  "pressure-breaking-valve": {
+    "width": 32,
+    "height": 32,
+    "x": 128,
+    "y": 172,
+    "pixelRatio": 2
+  },
+  "publictap": {
+    "width": 32,
+    "height": 32,
+    "x": 160,
+    "y": 172,
+    "pixelRatio": 2
+  },
+  "publictap_abandoned": {
+    "width": 32,
+    "height": 32,
+    "x": 192,
+    "y": 172,
+    "pixelRatio": 2
+  },
+  "publictap_functional": {
+    "width": 32,
+    "height": 32,
+    "x": 0,
+    "y": 204,
+    "pixelRatio": 2
+  },
+  "publictap_partially": {
+    "width": 32,
+    "height": 32,
+    "x": 32,
+    "y": 204,
+    "pixelRatio": 2
+  },
+  "pump": {
+    "width": 32,
+    "height": 32,
+    "x": 64,
+    "y": 204,
+    "pixelRatio": 2
+  },
+  "reservoir": {
+    "width": 32,
+    "height": 32,
+    "x": 96,
+    "y": 204,
+    "pixelRatio": 2
+  },
+  "solarpump": {
+    "width": 32,
+    "height": 32,
+    "x": 128,
+    "y": 204,
+    "pixelRatio": 2
+  },
+  "solarpump_abandoned": {
+    "width": 32,
+    "height": 32,
+    "x": 160,
+    "y": 204,
+    "pixelRatio": 2
+  },
+  "solarpump_functional": {
+    "width": 32,
+    "height": 32,
+    "x": 192,
+    "y": 204,
+    "pixelRatio": 2
+  },
+  "solarpump_partially": {
+    "width": 32,
+    "height": 32,
+    "x": 0,
+    "y": 236,
+    "pixelRatio": 2
+  },
+  "starting-chamber": {
+    "width": 32,
+    "height": 32,
+    "x": 32,
+    "y": 236,
+    "pixelRatio": 2
+  },
+  "valve": {
+    "width": 32,
+    "height": 32,
+    "x": 64,
+    "y": 236,
+    "pixelRatio": 2
+  },
+  "washout": {
+    "width": 32,
+    "height": 32,
+    "x": 96,
+    "y": 236,
+    "pixelRatio": 2
+  },
+  "waterkiosk": {
+    "width": 32,
+    "height": 32,
+    "x": 128,
+    "y": 236,
+    "pixelRatio": 2
+  },
+  "waterkiosk_abandoned": {
+    "width": 32,
+    "height": 32,
+    "x": 160,
+    "y": 236,
+    "pixelRatio": 2
+  },
+  "waterkiosk_functional": {
+    "width": 32,
+    "height": 32,
+    "x": 192,
+    "y": 236,
+    "pixelRatio": 2
+  },
+  "waterkiosk_partially": {
+    "width": 32,
+    "height": 32,
+    "x": 0,
+    "y": 268,
+    "pixelRatio": 2
+  },
+  "watersource": {
+    "width": 32,
+    "height": 32,
+    "x": 32,
+    "y": 268,
+    "pixelRatio": 2
+  },
+  "default-6": {
+    "width": 88,
+    "height": 28,
+    "x": 64,
+    "y": 268,
+    "pixelRatio": 2
+  },
+  "rectangle-yellow-6": {
+    "width": 88,
+    "height": 28,
+    "x": 0,
+    "y": 300,
+    "pixelRatio": 2
+  }
+}

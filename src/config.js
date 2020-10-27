@@ -23,6 +23,12 @@ module.exports = {
           path.resolve(export_dir,'../icons/mapbox-satellite-icons/icons'),
           path.resolve(export_dir,'../icons/water-icons/icons'),
         ],
+      },
+      {
+        output_dir: path.resolve(export_dir, '../docs/qgis/sprite'),
+        icons: [
+          path.resolve(export_dir,'../icons/water-icons/icons'),
+        ],
       }
     ]
 };

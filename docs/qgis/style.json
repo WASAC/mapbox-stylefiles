@@ -1,0 +1,582 @@
+{
+    "version": 8,
+    "name": "WASAC RWSS Vector Tile",
+    "center": [29.915923665876335, -2.00623424231469],
+    "zoom": 8.464821948189522,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+        "assets": {
+          "attribution": "©WASAC,Ltd.",
+          "minzoom": 8,
+          "maxzoom": 14,
+          "tiles": [
+              "https://wasac.github.io/vt/tiles/{z}/{x}/{y}.mvt"
+          ],
+          "type": "vector"
+      }
+    },
+    "sprite": "https://wasac.github.io/mapbox-stylefiles/unvt/sprite/sprite",
+    "glyphs": "https://optgeo.github.io/kokoromi-rw/font/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "village",
+            "type": "line",
+            "source": "assets",
+            "source-layer": "village",
+            "minzoom": 14,
+            "layout": {},
+            "paint": {"line-dasharray": [2, 3], "line-width": 2}
+        },
+        {
+            "id": "cell",
+            "type": "line",
+            "source": "assets",
+            "source-layer": "cell",
+            "minzoom": 13,
+            "layout": {},
+            "paint": {"line-color": "hsl(0, 0%, 0%)", "line-width": 2}
+        },
+        {
+            "id": "sector",
+            "type": "line",
+            "source": "assets",
+            "source-layer": "sector",
+            "minzoom": 10,
+            "layout": {},
+            "paint": {
+                "line-color": "rgb(179, 0, 0)",
+                "line-width": 2.5,
+                "line-dasharray": [2, 3]
+            }
+        },
+        {
+            "id": "district",
+            "type": "line",
+            "source": "assets",
+            "source-layer": "district",
+            "minzoom": 8,
+            "layout": {},
+            "paint": {"line-width": 3}
+        },
+        {
+            "id": "wss",
+            "type": "fill",
+            "source": "assets",
+            "source-layer": "wss",
+            "minzoom": 6,
+            "maxzoom": 16,
+            "layout": {},
+            "paint": {
+                "fill-color": [
+                    "match",
+                    ["get", "wss_type"],
+                    ["Pumping"],
+                    "hsla(128, 88%, 55%, 0.4)",
+                    "hsla(0, 95%, 79%, 0.4)"
+                ]
+            }
+        },
+        {
+            "id": "pipeline",
+            "type": "line",
+            "source": "assets",
+            "source-layer": "pipeline",
+            "minzoom": 10,
+            "layout": {},
+            "paint": {"line-color": "hsl(240, 100%, 50%)"}
+        },
+        {
+            "id": "watersource",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "watersource",
+            "minzoom": 12,
+            "layout": {"icon-image": "watersource"},
+            "paint": {}
+        },
+        {
+            "id": "reservoir",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "reservoir",
+            "minzoom": 12,
+            "layout": {"icon-image": "reservoir"},
+            "paint": {}
+        },
+        {
+            "id": "pumping-station",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "pumping_station",
+            "minzoom": 12,
+            "layout": {"icon-image": "pump"},
+            "paint": {}
+        },
+        {
+            "id": "chamber",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "chamber",
+            "minzoom": 14,
+            "layout": {
+                "icon-image": [
+                    "match",
+                    ["get", "chamber_type"],
+                    ["Valve chamber"],
+                    "valve",
+                    ["Washout chamber"],
+                    "washout",
+                    ["Air release chamber"],
+                    "air-valve",
+                    ["Break Pressure chamber"],
+                    "break-pressure-chamber",
+                    ["Collection chamber"],
+                    "collection-chamber",
+                    ["PRV chamber"],
+                    "pressure-breaking-valve",
+                    ["Starting chamber"],
+                    "starting-chamber",
+                    ""
+                ],
+                "text-field": ["to-string", ["get", "chamber_type"]],
+                "text-font": [
+                  "sans"
+                ],
+                "text-size": 12,
+                "text-anchor": "left",
+                "text-offset": [1, 0]
+            },
+            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
+        },
+        {
+            "id": "other connection",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "connection",
+            "minzoom": 15,
+            "filter": [
+                "match",
+                ["get", "connection_type"],
+                [
+                    "Household",
+                    "Industrial",
+                    "Public Tap",
+                    "Water Kiosk",
+                    "Institution"
+                ],
+                false,
+                true
+            ],
+            "layout": {
+                "icon-image": [
+                    "match",
+                    ["get", "status"],
+                    ["Full Functional"],
+                    "meter_functional",
+                    ["Partially Functional"],
+                    "meter_partially",
+                    ["Not Functional", "Abandoned"],
+                    "meter_abandoned",
+                    "meter"
+                ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "household",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "connection",
+            "minzoom": 15,
+            "filter": [
+                "match",
+                ["get", "connection_type"],
+                ["Household"],
+                true,
+                false
+            ],
+            "layout": {
+                "icon-image": [
+                    "match",
+                    ["get", "status"],
+                    ["Full Functional"],
+                    "household_functional",
+                    ["Partially Functional"],
+                    "household_partially",
+                    ["Not Functional", "Abandoned"],
+                    "household_abandoned",
+                    "household"
+                ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "publictap",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "connection",
+            "minzoom": 15,
+            "filter": [
+                "match",
+                ["get", "connection_type"],
+                ["Public Tap"],
+                true,
+                false
+            ],
+            "layout": {
+                "icon-image": [
+                    "match",
+                    ["get", "status"],
+                    ["Full Functional"],
+                    "publictap_functional",
+                    ["Partially Functional"],
+                    "publictap_partially",
+                    ["Not Functional", "Abandoned"],
+                    "publictap_abandoned",
+                    "publictap"
+                ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "waterkiosk",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "connection",
+            "minzoom": 15,
+            "filter": [
+                "match",
+                ["get", "connection_type"],
+                ["Water Kiosk"],
+                true,
+                false
+            ],
+            "layout": {
+                "icon-image": [
+                    "match",
+                    ["get", "status"],
+                    ["Full Functional"],
+                    "waterkiosk_functional",
+                    ["Partially Functional"],
+                    "waterkiosk_partially",
+                    ["Not Functional", "Abandoned"],
+                    "waterkiosk_abandoned",
+                    "waterkiosk"
+                ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "industrial",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "connection",
+            "minzoom": 15,
+            "filter": [
+                "match",
+                ["get", "connection_type"],
+                ["Industrial"],
+                true,
+                false
+            ],
+            "layout": {
+                "icon-image": [
+                    "match",
+                    ["get", "status"],
+                    ["Full Functional"],
+                    "industrial_functional",
+                    ["Partially Functional"],
+                    "industrial_partially",
+                    ["Not Functional", "Abandoned"],
+                    "industrial_abandoned",
+                    "industrial"
+                ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "institution",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "connection",
+            "minzoom": 15,
+            "filter": [
+                "match",
+                ["get", "connection_type"],
+                ["Institution"],
+                true,
+                false
+            ],
+            "layout": {
+                "icon-image": [
+                    "match",
+                    ["get", "status"],
+                    ["Full Functional"],
+                    "institution_functional",
+                    ["Partially Functional"],
+                    "institution_partially",
+                    ["Not Functional", "Abandoned"],
+                    "institution_abandoned",
+                    "institution"
+                ]
+            },
+            "paint": {}
+        },
+        {
+          "id": "handpump",
+          "type": "symbol",
+          "source": "assets",
+          "source-layer": "water_points",
+          "minzoom": 12,
+          "filter": [
+            "match",
+            ["get", "wsf_type"],
+            ["Hand Pump"],
+            true,
+            false
+          ],
+          "layout": {
+            "icon-image": [
+              "match",
+              ["get", "status"],
+              ["Full Functional"],
+              "handpump_functional",
+              ["Partially Functional"],
+              "handpump_partially",
+              ["Not Functional", "Abandoned"],
+              "handpump_abandoned",
+              "handpump"
+            ]
+          },
+          "paint": {}
+        },
+        {
+            "id": "improvedspring",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "water_points",
+            "minzoom": 12,
+            "filter": [
+              "match",
+              ["get", "wsf_type"],
+              ["Improved Spring"],
+              true,
+              false
+            ],
+            "layout": {
+              "icon-image": [
+                "match",
+                ["get", "status"],
+                ["Full Functional"],
+                "improvedspring_functional",
+                ["Partially Functional"],
+                "improvedspring_partially",
+                ["Not Functional", "Abandoned"],
+                "improvedspring_abandoned",
+                "improvedspring"
+              ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "dugwell",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "water_points",
+            "minzoom": 12,
+            "filter": [
+              "match",
+              ["get", "wsf_type"],
+              ["Dug well"],
+              true,
+              false
+            ],
+            "layout": {
+              "icon-image": [
+                "match",
+                ["get", "status"],
+                ["Full Functional"],
+                "dugwell_functional",
+                ["Partially Functional"],
+                "dugwell_partially",
+                ["Not Functional", "Abandoned"],
+                "dugwell_abandoned",
+                "dugwell"
+              ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "solarpump",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "water_points",
+            "minzoom": 12,
+            "filter": [
+              "match",
+              ["get", "wsf_type"],
+              ["Solar Pump"],
+              true,
+              false
+            ],
+            "layout": {
+              "icon-image": [
+                "match",
+                ["get", "status"],
+                ["Full Functional"],
+                "solarpump_functional",
+                ["Partially Functional"],
+                "solarpump_partially",
+                ["Not Functional", "Abandoned"],
+                "solarpump_abandoned",
+                "solarpump"
+              ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "otherwaterpoint",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "water_points",
+            "minzoom": 12,
+            "filter": [
+                "match",
+                ["get", "wsf_type"],
+                [
+                    "Hand Pump",
+                    "Improved Spring",
+                    "Dug well",
+                    "Solar Pump"
+                ],
+                false,
+                true
+            ],
+            "layout": {
+                "icon-image": [
+                    "match",
+                    ["get", "status"],
+                    ["Full Functional"],
+                    "otherwaterpoint_functional",
+                    ["Partially Functional"],
+                    "otherwaterpoint_partially",
+                    ["Not Functional", "Abandoned"],
+                    "otherwaterpoint_abandoned",
+                    "otherwaterpoint"
+                ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "pipeline_annotation",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "pipeline",
+            "minzoom": 14,
+            "layout": {
+                "text-field": [
+                    "concat",
+                    "DN",
+                    ["get", "pipe_size"],
+                    " ",
+                    ["get", "material"],
+                    " ",
+                    ["get", "construction_year"]
+                ],
+                "text-font": [
+                  "sans"
+                ],
+                "symbol-placement": "line-center",
+                "text-size": 14
+            },
+            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
+        },
+        {
+            "id": "district-annotation",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "district_annotation",
+            "minzoom": 8,
+            "maxzoom": 11,
+            "layout": {
+                "text-field": ["to-string", ["get", "district"]],
+                "text-font": [
+                  "sans"
+                ]
+            },
+            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
+        },
+        {
+            "id": "sector-annotation",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "sector_annotation",
+            "minzoom": 10,
+            "maxzoom": 14,
+            "layout": {
+                "text-field": ["to-string", ["get", "sector"]],
+                "text-size": 14,
+                "text-font": [
+                  "sans"
+                ]
+            },
+            "paint": {
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 1,
+                "text-color": "hsl(0, 77%, 47%)"
+            }
+        },
+        {
+            "id": "cell-annotation",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "cell_annotation",
+            "minzoom": 13,
+            "maxzoom": 15,
+            "layout": {
+                "text-field": ["to-string", ["get", "cell"]],
+                "text-size": 13,
+                "text-font": [
+                  "sans"
+                ]
+            },
+            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
+        },
+        {
+            "id": "village-annotation",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "village_annotation",
+            "minzoom": 14,
+            "maxzoom": 16,
+            "layout": {
+                "text-field": ["to-string", ["get", "village"]],
+                "text-size": 13,
+                "text-font": [
+                  "sans"
+                ]
+            },
+            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
+        },
+        {
+            "id": "wss-annotation",
+            "type": "symbol",
+            "source": "assets",
+            "source-layer": "wss_annotation",
+            "minzoom": 11,
+            "maxzoom": 15,
+            "layout": {
+                "text-field": ["to-string", ["get", "wss_name"]],
+                "text-size": 12,
+                "icon-text-fit": "both",
+                "icon-size": 1.2,
+                "icon-image": "rectangle-yellow-6",
+                "text-font": [
+                  "sans"
+                ]
+            }, 
+            "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
+        }
+    ]
+}
