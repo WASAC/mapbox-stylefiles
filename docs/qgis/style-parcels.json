@@ -16,7 +16,6 @@
           "type": "vector"
       }
     },
-    "sprite": "https://wasac.github.io/mapbox-stylefiles/qgis/sprite/sprite",
     "glyphs": "https://optgeo.github.io/kokoromi-rw/font/{fontstack}/{range}.pbf",
     "layers": [
         {
