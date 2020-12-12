@@ -3156,6 +3156,35 @@
             }
         },
         {
+            "id": "building-extrusion",
+            "type": "fill-extrusion",
+            "metadata": {
+              "mapbox:featureComponent": "buildings",
+              "mapbox:group": "Buildings, extruded"
+            },
+            "source": "composite",
+            "source-layer": "building",
+            "minzoom": 15,
+            "filter": [
+              "all",
+              [
+                "==",
+                ["get", "underground"],
+                "false"
+              ],
+              ["!=", ["get", "extrude"], "false"]
+            ],
+            "layout": {},
+            "paint": {
+              "fill-extrusion-color": "rgba(255, 255, 255, 1)",
+              "fill-extrusion-height": [
+                "get",
+                "height"
+              ],
+              "fill-extrusion-opacity": 0.6
+            }
+        },
+        {
             "id": "admin-1-boundary-bg",
             "type": "line",
             "metadata": {
