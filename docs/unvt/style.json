@@ -31,10 +31,18 @@
               "https://vt-parcels-2020.netlify.app/tiles/{z}/{x}/{y}.pbf"
           ],
           "type": "vector"
+      },
+      "rwanda-dem":{
+        "type": "raster-dem",
+        "tiles": [
+            "https://wasac.github.io/rw-terrain/tiles/{z}/{x}/{y}.png"
+        ],
+        "tileSize": 512,
+        "maxzoom": 15
       }
     },
     "sprite": "https://wasac.github.io/mapbox-stylefiles/unvt/sprite/sprite",
-    "glyphs": "https://optgeo.github.io/kokoromi-rw/font/{fontstack}/{range}.pbf",
+    "glyphs": "https://watergis.github.io/font-glyphs/glyphs/{fontstack}/{range}.pbf",
     "layers": [
         {
             "id": "background",
@@ -47,6 +55,22 @@
               ]
             },
             "type": "background"
+          },
+          {
+            "id": "hillshade",
+            "type": "hillshade",
+            "source": "rwanda-dem",
+            "minzoom": 5,
+            "maxzoom": 14,
+            "layout": {},
+            "paint": {
+              "hillshade-accent-color": "#5a5a5a",
+              "hillshade-exaggeration": 0.5,
+              "hillshade-highlight-color": "#FFFFFF",
+              "hillshade-illumination-anchor": "viewport",
+              "hillshade-illumination-direction": 335,
+              "hillshade-shadow-color": "#5a5a5a"
+            }
           },
           {
             "id": "Coastline",
@@ -6299,7 +6323,7 @@
                 ]
               ],
               "text-font": [
-                "sans"
+                "Roboto Regular"
               ],
               "text-offset": [
                 0,
@@ -6370,7 +6394,7 @@
                 ]
               ],
               "text-font": [
-                "sans"
+                "Roboto Regular"
               ],
               "text-offset": [
                 0,
@@ -6500,7 +6524,7 @@
               "symbol-placement": "line",
               "text-field": "{name}",
               "text-font": [
-                "sans"
+                "Roboto Regular"
               ],
               "text-offset": [
                 "step",
@@ -6841,7 +6865,7 @@
                 ]
               ],
               "text-font": [
-                "sans"
+                "Roboto Regular"
               ],
               "text-offset": [
                 "step",
@@ -7018,7 +7042,7 @@
             "minzoom": 17.5,
             "layout": {
                 "text-field": ["to-string", ["get", "parcel_no"]],
-                "text-font": ["sans"],
+                "text-font": ["Roboto Regular"],
                 "text-size": 9,
                 "symbol-avoid-edges": true
             },
@@ -7106,7 +7130,7 @@
                 ],
                 "text-field": ["to-string", ["get", "chamber_type"]],
                 "text-font": [
-                  "sans"
+                  "Roboto Regular"
                 ],
                 "text-size": 12,
                 "text-anchor": "left",
@@ -7450,7 +7474,7 @@
                     ["get", "construction_year"]
                 ],
                 "text-font": [
-                  "sans"
+                  "Roboto Regular"
                 ],
                 "symbol-placement": "line-center",
                 "text-size": 14
@@ -7467,7 +7491,7 @@
             "layout": {
                 "text-field": ["to-string", ["get", "district"]],
                 "text-font": [
-                  "sans"
+                  "Roboto Bold"
                 ]
             },
             "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
@@ -7483,7 +7507,7 @@
                 "text-field": ["to-string", ["get", "sector"]],
                 "text-size": 14,
                 "text-font": [
-                  "sans"
+                  "Roboto Bold"
                 ]
             },
             "paint": {
@@ -7503,7 +7527,7 @@
                 "text-field": ["to-string", ["get", "cell"]],
                 "text-size": 13,
                 "text-font": [
-                  "sans"
+                  "Roboto Bold"
                 ]
             },
             "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
@@ -7519,7 +7543,7 @@
                 "text-field": ["to-string", ["get", "village"]],
                 "text-size": 13,
                 "text-font": [
-                  "sans"
+                  "Roboto Italic"
                 ]
             },
             "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
@@ -7538,7 +7562,7 @@
                 "icon-size": 1.2,
                 "icon-image": "rectangle-yellow-6",
                 "text-font": [
-                  "sans"
+                  "Roboto Bold"
                 ]
             }, 
             "paint": {"text-halo-color": "#ffffff", "text-halo-width": 1}
