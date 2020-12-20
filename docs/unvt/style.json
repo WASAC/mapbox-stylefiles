@@ -21,7 +21,11 @@
           "tiles": [
               "https://wasac.github.io/vt/tiles/{z}/{x}/{y}.mvt"
           ],
-          "type": "vector"
+          "type": "vector",
+          "promoteId": {
+              "wss": "wss_id",
+              "pipeline": "id"
+          }
       },
       "parcels": {
           "attribution": "©Rwanda Land Management and Use Authority(RLMUA)",
@@ -7057,14 +7061,20 @@
             "maxzoom": 16,
             "layout": {},
             "paint": {
-                "fill-color": [
-                    "match",
-                    ["get", "wss_type"],
-                    ["Pumping"],
-                    "hsla(128, 88%, 55%, 0.4)",
-                    "hsla(0, 95%, 79%, 0.4)"
-                ]
-            }
+              "fill-color": [
+                  "match",
+                  ["get", "wss_type"],
+                  ["Pumping"],
+                  "#27F142",
+                  "#FC9696"
+              ],
+              "fill-opacity": [
+                  "case",
+                  ["boolean", ["feature-state", "hover"], false],
+                  0.8,
+                  0.2
+              ]
+          }
         },
         {
             "id": "pipeline",
@@ -7073,7 +7083,15 @@
             "source-layer": "pipeline",
             "minzoom": 10,
             "layout": {},
-            "paint": {"line-color": "hsl(240, 100%, 50%)"}
+            "paint": {
+              "line-color": "hsl(240, 100%, 50%)",
+              "line-width":[
+                  "case",
+                  ["boolean", ["feature-state", "hover"], false],
+                  2.5,
+                  1
+              ]
+          }
         },
         {
             "id": "watersource",
