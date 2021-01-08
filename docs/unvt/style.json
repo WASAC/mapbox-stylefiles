@@ -39,9 +39,10 @@
       "rwanda-dem":{
         "type": "raster-dem",
         "tiles": [
-            "https://wasac.github.io/rw-terrain/tiles/{z}/{x}/{y}.png"
+            "https://wasac.github.io/rw-terrain-webp/tiles/{z}/{x}/{y}.webp"
         ],
         "tileSize": 512,
+        "minzoom": 5,
         "maxzoom": 15
       }
     },
