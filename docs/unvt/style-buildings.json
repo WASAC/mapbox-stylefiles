@@ -15,7 +15,7 @@
             "type": "vector"
         },
         "assets": {
-          "attribution": "©WASAC,Ltd.",
+          "attribution": "©<a href='http://wasac.rw'>WASAC,Ltd.</a>",
           "minzoom": 8,
           "maxzoom": 14,
           "tiles": [
@@ -46,7 +46,7 @@
         "maxzoom": 15
       },
       "open-buildings": {
-        "attribution": "©Google",
+        "attribution": "©<a href='https://sites.research.google/open-buildings/'>Google</a>",
         "minzoom": 15,
         "maxzoom": 15,
         "tiles": [
