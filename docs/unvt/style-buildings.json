@@ -6382,7 +6382,7 @@
             ]
           },
           "minzoom": 18,
-          "source": "v",
+          "source": "ne",
           "source-layer": "nature",
           "type": "symbol"
         },
