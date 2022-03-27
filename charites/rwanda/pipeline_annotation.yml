@@ -1,0 +1,24 @@
+id: pipeline_annotation
+type: symbol
+source: assets
+source-layer: pipeline
+minzoom: 14
+layout:
+  text-field:
+    - concat
+    - DN
+    - - get
+      - pipe_size
+    - ' '
+    - - get
+      - material
+    - ' '
+    - - get
+      - construction_year
+  text-font:
+    - Roboto Regular
+  symbol-placement: line-center
+  text-size: 14
+paint:
+  text-halo-color: '#ffffff'
+  text-halo-width: 1

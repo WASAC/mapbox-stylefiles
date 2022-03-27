@@ -1,0 +1,18 @@
+id: sector-annotation
+type: symbol
+source: assets
+source-layer: sector_annotation
+minzoom: 10
+maxzoom: 14
+layout:
+  text-field:
+    - to-string
+    - - get
+      - sector
+  text-size: 14
+  text-font:
+    - Roboto Bold
+paint:
+  text-halo-color: '#ffffff'
+  text-halo-width: 1
+  text-color: hsl(0, 77%, 47%)

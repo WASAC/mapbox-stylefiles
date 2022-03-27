@@ -1,0 +1,26 @@
+id: solarpump
+type: symbol
+source: assets
+source-layer: water_points
+minzoom: 12
+filter:
+  - match
+  - - get
+    - wsf_type
+  - - Solar Pump
+  - true
+  - false
+layout:
+  icon-image:
+    - match
+    - - get
+      - status
+    - - Full Functional
+    - solarpump_functional
+    - - Partially Functional
+    - solarpump_partially
+    - - Not Functional
+      - Abandoned
+    - solarpump_abandoned
+    - solarpump
+paint: {}

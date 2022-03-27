@@ -1,0 +1,8 @@
+id: reservoir
+type: symbol
+source: assets
+source-layer: reservoir
+minzoom: 12
+layout:
+  icon-image: reservoir
+paint: {}

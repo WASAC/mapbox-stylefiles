@@ -1,0 +1,39 @@
+id: chamber
+type: symbol
+source: assets
+source-layer: chamber
+minzoom: 14
+layout:
+  icon-image:
+    - match
+    - - get
+      - chamber_type
+    - - Valve chamber
+    - valve
+    - - Washout chamber
+    - washout
+    - - Air release chamber
+    - air-valve
+    - - Break Pressure chamber
+    - break-pressure-chamber
+    - - Collection chamber
+    - collection-chamber
+    - - PRV chamber
+    - pressure-breaking-valve
+    - - Starting chamber
+    - starting-chamber
+    - ''
+  text-field:
+    - to-string
+    - - get
+      - chamber_type
+  text-font:
+    - Roboto Regular
+  text-size: 12
+  text-anchor: left
+  text-offset:
+    - 1
+    - 0
+paint:
+  text-halo-color: '#ffffff'
+  text-halo-width: 1

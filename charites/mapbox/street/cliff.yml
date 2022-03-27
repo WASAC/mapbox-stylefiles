@@ -1,0 +1,27 @@
+id: cliff
+type: line
+metadata:
+  mapbox:featureComponent: terrain
+  mapbox:group: Terrain, surface
+source: composite
+source-layer: structure
+minzoom: 15
+filter:
+  - '=='
+  - - get
+    - class
+  - cliff
+layout:
+  line-cap: round
+  line-join: round
+paint:
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 15
+    - 0
+    - 15.25
+    - 1
+  line-width: 10
+  line-pattern: cliff

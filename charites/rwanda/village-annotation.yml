@@ -1,0 +1,17 @@
+id: village-annotation
+type: symbol
+source: assets
+source-layer: village_annotation
+minzoom: 14
+maxzoom: 16
+layout:
+  text-field:
+    - to-string
+    - - get
+      - village
+  text-size: 13
+  text-font:
+    - Roboto Italic
+paint:
+  text-halo-color: '#ffffff'
+  text-halo-width: 1

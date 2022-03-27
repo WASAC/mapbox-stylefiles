@@ -1,0 +1,26 @@
+id: dugwell
+type: symbol
+source: assets
+source-layer: water_points
+minzoom: 12
+filter:
+  - match
+  - - get
+    - wsf_type
+  - - Dug well
+  - true
+  - false
+layout:
+  icon-image:
+    - match
+    - - get
+      - status
+    - - Full Functional
+    - dugwell_functional
+    - - Partially Functional
+    - dugwell_partially
+    - - Not Functional
+      - Abandoned
+    - dugwell_abandoned
+    - dugwell
+paint: {}

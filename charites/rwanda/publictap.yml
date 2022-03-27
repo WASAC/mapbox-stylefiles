@@ -1,0 +1,26 @@
+id: publictap
+type: symbol
+source: assets
+source-layer: connection
+minzoom: 15
+filter:
+  - match
+  - - get
+    - connection_type
+  - - Public Tap
+  - true
+  - false
+layout:
+  icon-image:
+    - match
+    - - get
+      - status
+    - - Full Functional
+    - publictap_functional
+    - - Partially Functional
+    - publictap_partially
+    - - Not Functional
+      - Abandoned
+    - publictap_abandoned
+    - publictap
+paint: {}

@@ -1,0 +1,26 @@
+id: waterkiosk
+type: symbol
+source: assets
+source-layer: connection
+minzoom: 15
+filter:
+  - match
+  - - get
+    - connection_type
+  - - Water Kiosk
+  - true
+  - false
+layout:
+  icon-image:
+    - match
+    - - get
+      - status
+    - - Full Functional
+    - waterkiosk_functional
+    - - Partially Functional
+    - waterkiosk_partially
+    - - Not Functional
+      - Abandoned
+    - waterkiosk_abandoned
+    - waterkiosk
+paint: {}

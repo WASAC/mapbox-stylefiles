@@ -1,0 +1,11 @@
+id: village
+type: line
+source: assets
+source-layer: village
+minzoom: 14
+layout: {}
+paint:
+  line-dasharray:
+    - 2
+    - 3
+  line-width: 2

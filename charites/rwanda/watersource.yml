@@ -1,0 +1,8 @@
+id: watersource
+type: symbol
+source: assets
+source-layer: watersource
+minzoom: 12
+layout:
+  icon-image: watersource
+paint: {}

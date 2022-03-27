@@ -7,7 +7,13 @@
     "doc": "docs"
   },
   "scripts": {
-    "sprite": "node src/sprite-create.js"
+    "sprite": "node src/sprite-create.js",
+    "build": "npm run build:unvt && npm run build:building && npm run build:mapbox-street && npm run build:mapbox-satellite && npm run build:mapbox-terrain",
+    "build:unvt": "charites build charites/style.yml docs/unvt/style.json",
+    "build:building": "charites build charites/style-buildings.yml docs/unvt/style-buildings.json",
+    "build:mapbox-street": "charites build charites/style-mapbox-street.yml docs/street/style.json",
+    "build:mapbox-satellite": "charites build charites/style-mapbox-satellite.yml docs/satellite/style.json",
+    "build:mapbox-terrain": "charites build charites/style-mapbox-terrain.yml docs/terrain/style.json"
   },
   "repository": {
     "type": "git",
@@ -20,6 +26,7 @@
   },
   "homepage": "https://github.com/wasac/mapbox-stylefiles#readme",
   "dependencies": {
+    "@unvt/charites": "^0.1.4",
     "@watergis/sprite-creator": "^0.1.0"
   }
 }

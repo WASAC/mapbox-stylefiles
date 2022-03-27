@@ -1,0 +1,26 @@
+id: industrial
+type: symbol
+source: assets
+source-layer: connection
+minzoom: 15
+filter:
+  - match
+  - - get
+    - connection_type
+  - - Industrial
+  - true
+  - false
+layout:
+  icon-image:
+    - match
+    - - get
+      - status
+    - - Full Functional
+    - industrial_functional
+    - - Partially Functional
+    - industrial_partially
+    - - Not Functional
+      - Abandoned
+    - industrial_abandoned
+    - industrial
+paint: {}

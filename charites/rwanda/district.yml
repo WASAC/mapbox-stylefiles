@@ -1,0 +1,8 @@
+id: district
+type: line
+source: assets
+source-layer: district
+minzoom: 8
+layout: {}
+paint:
+  line-width: 3

@@ -1,0 +1,26 @@
+id: household
+type: symbol
+source: assets
+source-layer: connection
+minzoom: 15
+filter:
+  - match
+  - - get
+    - connection_type
+  - - Household
+  - true
+  - false
+layout:
+  icon-image:
+    - match
+    - - get
+      - status
+    - - Full Functional
+    - household_functional
+    - - Partially Functional
+    - household_partially
+    - - Not Functional
+      - Abandoned
+    - household_abandoned
+    - household
+paint: {}

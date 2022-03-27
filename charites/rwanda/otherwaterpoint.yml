@@ -1,0 +1,29 @@
+id: otherwaterpoint
+type: symbol
+source: assets
+source-layer: water_points
+minzoom: 12
+filter:
+  - match
+  - - get
+    - wsf_type
+  - - Hand Pump
+    - Improved Spring
+    - Dug well
+    - Solar Pump
+  - false
+  - true
+layout:
+  icon-image:
+    - match
+    - - get
+      - status
+    - - Full Functional
+    - otherwaterpoint_functional
+    - - Partially Functional
+    - otherwaterpoint_partially
+    - - Not Functional
+      - Abandoned
+    - otherwaterpoint_abandoned
+    - otherwaterpoint
+paint: {}

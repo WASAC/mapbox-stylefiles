@@ -1,0 +1,9 @@
+id: cell
+type: line
+source: assets
+source-layer: cell
+minzoom: 13
+layout: {}
+paint:
+  line-color: hsl(0, 0%, 0%)
+  line-width: 2

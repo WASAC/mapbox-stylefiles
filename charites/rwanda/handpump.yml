@@ -1,0 +1,26 @@
+id: handpump
+type: symbol
+source: assets
+source-layer: water_points
+minzoom: 12
+filter:
+  - match
+  - - get
+    - wsf_type
+  - - Hand Pump
+  - true
+  - false
+layout:
+  icon-image:
+    - match
+    - - get
+      - status
+    - - Full Functional
+    - handpump_functional
+    - - Partially Functional
+    - handpump_partially
+    - - Not Functional
+      - Abandoned
+    - handpump_abandoned
+    - handpump
+paint: {}

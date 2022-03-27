@@ -1,0 +1,8 @@
+id: pumping-station
+type: symbol
+source: assets
+source-layer: pumping_station
+minzoom: 12
+layout:
+  icon-image: pump
+paint: {}

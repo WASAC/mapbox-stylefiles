@@ -1,0 +1,30 @@
+id: other connection
+type: symbol
+source: assets
+source-layer: connection
+minzoom: 15
+filter:
+  - match
+  - - get
+    - connection_type
+  - - Household
+    - Industrial
+    - Public Tap
+    - Water Kiosk
+    - Institution
+  - false
+  - true
+layout:
+  icon-image:
+    - match
+    - - get
+      - status
+    - - Full Functional
+    - meter_functional
+    - - Partially Functional
+    - meter_partially
+    - - Not Functional
+      - Abandoned
+    - meter_abandoned
+    - meter
+paint: {}

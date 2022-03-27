@@ -1,0 +1,9 @@
+id: parcels
+type: line
+source: parcels
+source-layer: parcels
+minzoom: 16
+layout: {}
+paint:
+  line-width: 0.5
+  line-color: rgba(131, 131, 131, 1)

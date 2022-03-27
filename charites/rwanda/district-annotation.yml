@@ -1,0 +1,16 @@
+id: district-annotation
+type: symbol
+source: assets
+source-layer: district_annotation
+minzoom: 8
+maxzoom: 11
+layout:
+  text-field:
+    - to-string
+    - - get
+      - district
+  text-font:
+    - Roboto Bold
+paint:
+  text-halo-color: '#ffffff'
+  text-halo-width: 1

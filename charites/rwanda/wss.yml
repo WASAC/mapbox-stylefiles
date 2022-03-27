@@ -1,0 +1,23 @@
+id: wss
+type: fill
+source: assets
+source-layer: wss
+minzoom: 6
+maxzoom: 16
+layout: {}
+paint:
+  fill-color:
+    - match
+    - - get
+      - wss_type
+    - - Pumping
+    - '#27F142'
+    - '#FC9696'
+  fill-opacity:
+    - case
+    - - boolean
+      - - feature-state
+        - hover
+      - false
+    - 0.8
+    - 0.2

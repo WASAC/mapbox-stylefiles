@@ -1,0 +1,50 @@
+id: gate-fence-hedge
+type: line
+metadata:
+  mapbox:featureComponent: walking-cycling
+  mapbox:group: Walking, cycling, etc., barriers-bridges
+source: composite
+source-layer: structure
+minzoom: 16
+filter:
+  - match
+  - - get
+    - class
+  - - gate
+    - fence
+    - hedge
+  - true
+  - false
+layout:
+  line-cap: round
+  line-join: round
+paint:
+  line-color:
+    - match
+    - - get
+      - class
+    - hedge
+    - hsl(99, 34%, 69%)
+    - hsl(35, 19%, 76%)
+  line-width:
+    - interpolate
+    - - linear
+    - - zoom
+    - 16
+    - 1
+    - 20
+    - 3
+  line-opacity:
+    - match
+    - - get
+      - class
+    - gate
+    - 0.5
+    - 1
+  line-dasharray:
+    - 1
+    - 2
+    - 5
+    - 2
+    - 1
+    - 2

@@ -1,0 +1,16 @@
+id: pipeline
+type: line
+source: assets
+source-layer: pipeline
+minzoom: 10
+layout: {}
+paint:
+  line-color: hsl(240, 100%, 50%)
+  line-width:
+    - case
+    - - boolean
+      - - feature-state
+        - hover
+      - false
+    - 2.5
+    - 1

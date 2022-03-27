@@ -1,0 +1,26 @@
+id: improvedspring
+type: symbol
+source: assets
+source-layer: water_points
+minzoom: 12
+filter:
+  - match
+  - - get
+    - wsf_type
+  - - Improved Spring
+  - true
+  - false
+layout:
+  icon-image:
+    - match
+    - - get
+      - status
+    - - Full Functional
+    - improvedspring_functional
+    - - Partially Functional
+    - improvedspring_partially
+    - - Not Functional
+      - Abandoned
+    - improvedspring_abandoned
+    - improvedspring
+paint: {}

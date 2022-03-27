@@ -1,0 +1,26 @@
+id: institution
+type: symbol
+source: assets
+source-layer: connection
+minzoom: 15
+filter:
+  - match
+  - - get
+    - connection_type
+  - - Institution
+  - true
+  - false
+layout:
+  icon-image:
+    - match
+    - - get
+      - status
+    - - Full Functional
+    - institution_functional
+    - - Partially Functional
+    - institution_partially
+    - - Not Functional
+      - Abandoned
+    - institution_abandoned
+    - institution
+paint: {}
