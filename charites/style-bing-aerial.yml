@@ -1,0 +1,112 @@
+version: 8
+name: WASAC RWSS Vector Tile
+center:
+  - 29.915923665876335
+  - -2.00623424231469
+zoom: 8.464821948189522
+bearing: 0
+pitch: 0
+sources:
+  bing:
+    type: raster
+    tiles: [
+        "https://ecn.t0.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=1",
+        "https://ecn.t1.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=1",
+        "https://ecn.t2.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=1",
+        "https://ecn.t3.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=1",
+        "https://ecn.t4.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=1",
+        "https://ecn.t5.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=1",
+        "https://ecn.t6.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=1",
+        "https://ecn.t7.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=1",
+    ]
+    maxzoom: 18
+    attribution: 'Map tiles by <a target="_top" rel="noopener" href="http://bing.com">Microsoft</a>, under <a target="_top" rel="noopener" href="https://www.microsoft.com/en-us/maps/product">Microsoft Bing Maps Platform APIs Terms Of Use</a>'
+  v:
+    attribution: >-
+      OpenStreetMap contributors, Powered by the United Nations Vector Tile
+      Toolkit 
+    maxzoom: 15
+    tiles:
+      - https://wasac.github.io/naru/zxy/{z}/{x}/{y}.pbf
+    type: vector
+  ne:
+    attribution: ©Natural Earth
+    maxzoom: 5
+    tiles:
+      - https://watergis.github.io/ne2geojson/zxy/{z}/{x}/{y}.pbf
+    type: vector
+  assets:
+    attribution: ©<a href='http://wasac.rw'>WASAC,Ltd.</a>
+    minzoom: 8
+    maxzoom: 14
+    tiles:
+      - https://wasac.github.io/vt/tiles/{z}/{x}/{y}.mvt
+    type: vector
+    promoteId:
+      wss: wss_id
+      pipeline: id
+  parcels:
+    attribution: ©Rwanda Land Management and Use Authority(RLMUA)
+    minzoom: 16
+    maxzoom: 16
+    tiles:
+      - https://vt-parcels-2020.netlify.app/tiles/{z}/{x}/{y}.pbf
+    type: vector
+  rwanda-dem:
+    type: raster-dem
+    attribution: ©<a href='http://wasac.rw'>WASAC,Ltd.</a>
+    tiles:
+      - https://wasac.github.io/rw-terrain-webp/tiles/{z}/{x}/{y}.webp
+    tileSize: 512
+    minzoom: 5
+    maxzoom: 15
+sprite: https://wasac.github.io/mapbox-stylefiles/unvt/sprite/sprite
+glyphs: https://watergis.github.io/font-glyphs/glyphs/{fontstack}/{range}.pbf
+layers:
+  - !!inc/file bing/aerial.yml
+  - !!inc/file ne/ne-ls-country.yml
+  - !!inc/file osm/ls-boundary-other.yml
+  - !!inc/file osm/ls-boundary-international-disputed.yml
+  - !!inc/file osm/ls-boundary-international.yml
+  - !!inc/file ne/ne-pt-country.yml
+  - !!inc/file ne/ne-pt-place.yml
+  - !!inc/file osm/pt-nature.yml
+  - !!inc/file osm/pt-water.yml
+  - !!inc/file osm/pt-boundary.yml
+  - !!inc/file osm/pt-road.yml
+  - !!inc/file osm/pt-railway.yml
+  - !!inc/file osm/pt-route.yml
+  - !!inc/file osm/pt-structure.yml
+  - !!inc/file osm/pt-building.yml
+  - !!inc/file osm/ls-road-symbol.yml
+  - !!inc/file osm/pt-place.yml
+  - !!inc/file osm/pt-other.yml
+  - !!inc/file rwanda/village.yml
+  - !!inc/file rwanda/cell.yml
+  - !!inc/file rwanda/sector.yml
+  - !!inc/file rwanda/district.yml
+  - !!inc/file rwanda/parcels.yml
+  - !!inc/file rwanda/parcels_annotation.yml
+  - !!inc/file rwanda/wss.yml
+  - !!inc/file rwanda/pipeline.yml
+  - !!inc/file rwanda/watersource.yml
+  - !!inc/file rwanda/reservoir.yml
+  - !!inc/file rwanda/pumping-station.yml
+  - !!inc/file rwanda/chamber.yml
+  - !!inc/file rwanda/other connection.yml
+  - !!inc/file rwanda/household.yml
+  - !!inc/file rwanda/publictap.yml
+  - !!inc/file rwanda/waterkiosk.yml
+  - !!inc/file rwanda/industrial.yml
+  - !!inc/file rwanda/institution.yml
+  - !!inc/file rwanda/handpump.yml
+  - !!inc/file rwanda/improvedspring.yml
+  - !!inc/file rwanda/dugwell.yml
+  - !!inc/file rwanda/solarpump.yml
+  - !!inc/file rwanda/otherwaterpoint.yml
+  - !!inc/file rwanda/pipeline_annotation.yml
+  - !!inc/file rwanda/district-annotation.yml
+  - !!inc/file rwanda/sector-annotation.yml
+  - !!inc/file rwanda/cell-annotation.yml
+  - !!inc/file rwanda/village-annotation.yml
+  - !!inc/file rwanda/wss-annotation.yml

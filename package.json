@@ -8,12 +8,13 @@
   },
   "scripts": {
     "sprite": "node src/sprite-create.js",
-    "build": "npm run build:unvt && npm run build:building && npm run build:mapbox-street && npm run build:mapbox-satellite && npm run build:mapbox-terrain",
+    "build": "npm run build:unvt && npm run build:building && npm run build:bing-aerial",
     "build:unvt": "charites build charites/style.yml docs/unvt/style.json",
     "build:building": "charites build charites/style-buildings.yml docs/unvt/style-buildings.json",
     "build:mapbox-street": "charites build charites/style-mapbox-street.yml docs/street/style.json",
     "build:mapbox-satellite": "charites build charites/style-mapbox-satellite.yml docs/satellite/style.json",
-    "build:mapbox-terrain": "charites build charites/style-mapbox-terrain.yml docs/terrain/style.json"
+    "build:mapbox-terrain": "charites build charites/style-mapbox-terrain.yml docs/terrain/style.json",
+    "build:bing-aerial": "charites build charites/style-bing-aerial.yml docs/unvt/style-aerial.json"
   },
   "repository": {
     "type": "git",

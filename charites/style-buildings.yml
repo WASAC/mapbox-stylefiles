@@ -16,9 +16,7 @@ sources:
       - https://wasac.github.io/naru/zxy/{z}/{x}/{y}.pbf
     type: vector
   ne:
-    attribution: >-
-      ©Natural Earth., <img
-      src='https://unopengis.github.io/watermark/watermark.png'>
+    attribution: ©Natural Earth
     maxzoom: 5
     tiles:
       - https://watergis.github.io/ne2geojson/zxy/{z}/{x}/{y}.pbf
@@ -42,6 +40,7 @@ sources:
     type: vector
   rwanda-dem:
     type: raster-dem
+    attribution: ©<a href='http://wasac.rw'>WASAC,Ltd.</a>
     tiles:
       - https://wasac.github.io/rw-terrain-webp/tiles/{z}/{x}/{y}.webp
     tileSize: 512
