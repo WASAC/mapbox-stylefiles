@@ -1,0 +1,8 @@
+id: uwss-reservoir
+type: symbol
+source: uwssassets
+source-layer: reservoir
+minzoom: 12
+layout:
+  icon-image: reservoir
+paint: {}

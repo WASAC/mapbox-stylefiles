@@ -1,0 +1,8 @@
+id: uwss-pumping-station
+type: symbol
+source: uwssassets
+source-layer: pump
+minzoom: 12
+layout:
+  icon-image: pump
+paint: {}

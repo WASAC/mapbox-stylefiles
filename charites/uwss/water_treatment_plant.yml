@@ -1,0 +1,8 @@
+id: uwss-water-treatment-plant
+type: symbol
+source: uwssassets
+source-layer: water_treatment_plant
+minzoom: 9
+layout:
+  icon-image: watersource
+paint: {}

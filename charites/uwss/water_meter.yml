@@ -1,0 +1,8 @@
+id: uwss-water-meter
+type: symbol
+source: uwssassets
+source-layer: water_meter
+minzoom: 12
+layout:
+  icon-image: meter
+paint: {}

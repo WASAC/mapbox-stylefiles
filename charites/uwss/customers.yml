@@ -1,0 +1,8 @@
+id: uwss-customers
+type: symbol
+source: uwssassets
+source-layer: customers
+minzoom: 15
+layout:
+  icon-image: household
+paint: {}

@@ -45,6 +45,13 @@ sources:
     promoteId:
       wss: wss_id
       pipeline: id
+  uwssassets:
+    attribution: ©<a href='https://wasac.rw'>WASAC,Ltd.</a>
+    minzoom: 9
+    maxzoom: 14
+    tiles:
+      - https://wasac.github.io/uwss-vt/tiles/{z}/{x}/{y}.pbf
+    type: vector
   parcels:
     attribution: ©Rwanda Land Management and Use Authority(RLMUA)
     minzoom: 16
@@ -104,6 +111,17 @@ layers:
   - !!inc/file rwanda/dugwell.yml
   - !!inc/file rwanda/solarpump.yml
   - !!inc/file rwanda/otherwaterpoint.yml
+  - !!inc/file uwss/pipeline.yml
+  - !!inc/file uwss/water_treatment_plant.yml
+  - !!inc/file uwss/watersource.yml
+  - !!inc/file uwss/pump.yml
+  - !!inc/file uwss/reservoir.yml
+  - !!inc/file uwss/valve.yml
+  - !!inc/file uwss/manhole.yml
+  - !!inc/file uwss/firehydrant.yml
+  - !!inc/file uwss/water_meter.yml
+  - !!inc/file uwss/customers.yml
+  - !!inc/file uwss/pipeline_annotation.yml
   - !!inc/file rwanda/pipeline_annotation.yml
   - !!inc/file rwanda/district-annotation.yml
   - !!inc/file rwanda/sector-annotation.yml
