@@ -1,0 +1,8 @@
+id: uwss-fire-hydrant
+type: symbol
+source: uwssassets
+source-layer: fire_hydrant
+minzoom: 12
+layout:
+  icon-image: firehydrant
+paint: {}

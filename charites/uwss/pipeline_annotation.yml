@@ -1,0 +1,23 @@
+id: uwss_pipeline_annotation
+type: symbol
+source: uwssassets
+source-layer: pipeline
+minzoom: 14
+layout:
+  text-field:
+    - concat
+    - - get
+      - Pipeline_Category
+    - ' '
+    - - get
+      - Pipeline_Material
+    - ' '
+    - - get
+      - Diameter
+  text-font:
+    - Roboto Regular
+  symbol-placement: line-center
+  text-size: 14
+paint:
+  text-halo-color: '#ffffff'
+  text-halo-width: 1

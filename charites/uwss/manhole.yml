@@ -1,0 +1,8 @@
+id: uwss-manhole
+type: symbol
+source: uwssassets
+source-layer: manhole
+minzoom: 11
+layout:
+  icon-image: manhole
+paint: {}

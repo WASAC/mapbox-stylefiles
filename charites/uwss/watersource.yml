@@ -1,0 +1,8 @@
+id: uwss-watersource
+type: symbol
+source: uwssassets
+source-layer: water_source
+minzoom: 12
+layout:
+  icon-image: watersource
+paint: {}

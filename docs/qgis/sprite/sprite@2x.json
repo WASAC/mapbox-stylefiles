@@ -209,199 +209,206 @@
     "y": 140,
     "pixelRatio": 2
   },
-  "meter": {
+  "manhole": {
     "width": 32,
     "height": 32,
     "x": 88,
     "y": 0,
     "pixelRatio": 2
   },
-  "meter_abandoned": {
+  "meter": {
     "width": 32,
     "height": 32,
     "x": 120,
     "y": 0,
     "pixelRatio": 2
   },
-  "meter_functional": {
+  "meter_abandoned": {
     "width": 32,
     "height": 32,
     "x": 152,
     "y": 0,
     "pixelRatio": 2
   },
-  "meter_partially": {
+  "meter_functional": {
     "width": 32,
     "height": 32,
     "x": 184,
     "y": 0,
     "pixelRatio": 2
   },
-  "otherwaterpoint": {
+  "meter_partially": {
     "width": 32,
     "height": 32,
     "x": 0,
+    "y": 172,
+    "pixelRatio": 2
+  },
+  "otherwaterpoint": {
+    "width": 32,
+    "height": 32,
+    "x": 32,
     "y": 172,
     "pixelRatio": 2
   },
   "otherwaterpoint_abandoned": {
     "width": 32,
     "height": 32,
-    "x": 32,
+    "x": 64,
     "y": 172,
     "pixelRatio": 2
   },
   "otherwaterpoint_functional": {
     "width": 32,
     "height": 32,
-    "x": 64,
+    "x": 96,
     "y": 172,
     "pixelRatio": 2
   },
   "otherwaterpoint_partially": {
     "width": 32,
     "height": 32,
-    "x": 96,
+    "x": 128,
     "y": 172,
     "pixelRatio": 2
   },
   "pressure-breaking-valve": {
     "width": 32,
     "height": 32,
-    "x": 128,
+    "x": 160,
     "y": 172,
     "pixelRatio": 2
   },
   "publictap": {
     "width": 32,
     "height": 32,
-    "x": 160,
+    "x": 192,
     "y": 172,
     "pixelRatio": 2
   },
   "publictap_abandoned": {
     "width": 32,
     "height": 32,
-    "x": 192,
-    "y": 172,
+    "x": 0,
+    "y": 204,
     "pixelRatio": 2
   },
   "publictap_functional": {
     "width": 32,
     "height": 32,
-    "x": 0,
+    "x": 32,
     "y": 204,
     "pixelRatio": 2
   },
   "publictap_partially": {
     "width": 32,
     "height": 32,
-    "x": 32,
+    "x": 64,
     "y": 204,
     "pixelRatio": 2
   },
   "pump": {
     "width": 32,
     "height": 32,
-    "x": 64,
+    "x": 96,
     "y": 204,
     "pixelRatio": 2
   },
   "reservoir": {
     "width": 32,
     "height": 32,
-    "x": 96,
+    "x": 128,
     "y": 204,
     "pixelRatio": 2
   },
   "solarpump": {
     "width": 32,
     "height": 32,
-    "x": 128,
+    "x": 160,
     "y": 204,
     "pixelRatio": 2
   },
   "solarpump_abandoned": {
     "width": 32,
     "height": 32,
-    "x": 160,
+    "x": 192,
     "y": 204,
     "pixelRatio": 2
   },
   "solarpump_functional": {
     "width": 32,
     "height": 32,
-    "x": 192,
-    "y": 204,
+    "x": 0,
+    "y": 236,
     "pixelRatio": 2
   },
   "solarpump_partially": {
     "width": 32,
     "height": 32,
-    "x": 0,
+    "x": 32,
     "y": 236,
     "pixelRatio": 2
   },
   "starting-chamber": {
     "width": 32,
     "height": 32,
-    "x": 32,
+    "x": 64,
     "y": 236,
     "pixelRatio": 2
   },
   "valve": {
     "width": 32,
     "height": 32,
-    "x": 64,
+    "x": 96,
     "y": 236,
     "pixelRatio": 2
   },
   "washout": {
     "width": 32,
     "height": 32,
-    "x": 96,
+    "x": 128,
     "y": 236,
     "pixelRatio": 2
   },
   "waterkiosk": {
     "width": 32,
     "height": 32,
-    "x": 128,
+    "x": 160,
     "y": 236,
     "pixelRatio": 2
   },
   "waterkiosk_abandoned": {
     "width": 32,
     "height": 32,
-    "x": 160,
+    "x": 192,
     "y": 236,
     "pixelRatio": 2
   },
   "waterkiosk_functional": {
     "width": 32,
     "height": 32,
-    "x": 192,
-    "y": 236,
-    "pixelRatio": 2
-  },
-  "waterkiosk_partially": {
-    "width": 32,
-    "height": 32,
     "x": 0,
     "y": 268,
     "pixelRatio": 2
   },
-  "watersource": {
+  "waterkiosk_partially": {
     "width": 32,
     "height": 32,
     "x": 32,
     "y": 268,
     "pixelRatio": 2
   },
+  "watersource": {
+    "width": 32,
+    "height": 32,
+    "x": 64,
+    "y": 268,
+    "pixelRatio": 2
+  },
   "default-6": {
     "width": 88,
     "height": 28,
-    "x": 64,
+    "x": 96,
     "y": 268,
     "pixelRatio": 2
   },

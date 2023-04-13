@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/wasac/mapbox-stylefiles#readme",
   "dependencies": {
-    "@unvt/charites": "^0.1.4",
+    "@unvt/charites": "^0.4.0",
     "@watergis/sprite-creator": "^0.1.0"
   }
 }

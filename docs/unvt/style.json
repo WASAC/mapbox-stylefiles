@@ -38,6 +38,15 @@
         "pipeline": "id"
       }
     },
+    "uwssassets": {
+      "attribution": "©<a href='https://wasac.rw'>WASAC,Ltd.</a>",
+      "minzoom": 9,
+      "maxzoom": 14,
+      "tiles": [
+        "https://wasac.github.io/uwss-vt/tiles/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    },
     "parcels": {
       "attribution": "©Rwanda Land Management and Use Authority(RLMUA)",
       "minzoom": 16,
@@ -8055,6 +8064,171 @@
         ]
       },
       "paint": {}
+    },
+    {
+      "id": "uwss_pipeline",
+      "type": "line",
+      "source": "uwssassets",
+      "source-layer": "pipeline",
+      "minzoom": 9,
+      "layout": {},
+      "paint": {
+        "line-color": "hsl(240, 100%, 50%)",
+        "line-width": 1.5
+      }
+    },
+    {
+      "id": "uwss-water-treatment-plant",
+      "type": "symbol",
+      "source": "uwssassets",
+      "source-layer": "water_treatment_plant",
+      "minzoom": 9,
+      "layout": {
+        "icon-image": "watersource"
+      },
+      "paint": {}
+    },
+    {
+      "id": "uwss-watersource",
+      "type": "symbol",
+      "source": "uwssassets",
+      "source-layer": "water_source",
+      "minzoom": 12,
+      "layout": {
+        "icon-image": "watersource"
+      },
+      "paint": {}
+    },
+    {
+      "id": "uwss-pumping-station",
+      "type": "symbol",
+      "source": "uwssassets",
+      "source-layer": "pump",
+      "minzoom": 12,
+      "layout": {
+        "icon-image": "pump"
+      },
+      "paint": {}
+    },
+    {
+      "id": "uwss-reservoir",
+      "type": "symbol",
+      "source": "uwssassets",
+      "source-layer": "reservoir",
+      "minzoom": 12,
+      "layout": {
+        "icon-image": "reservoir"
+      },
+      "paint": {}
+    },
+    {
+      "id": "uwss-valve",
+      "type": "symbol",
+      "source": "uwssassets",
+      "source-layer": "valve",
+      "minzoom": 12,
+      "layout": {
+        "icon-image": "valve",
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "chamber_type"
+          ]
+        ],
+        "text-font": [
+          "Roboto Regular"
+        ],
+        "text-size": 12,
+        "text-anchor": "left",
+        "text-offset": [
+          1,
+          0
+        ]
+      },
+      "paint": {
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "uwss-manhole",
+      "type": "symbol",
+      "source": "uwssassets",
+      "source-layer": "manhole",
+      "minzoom": 11,
+      "layout": {
+        "icon-image": "manhole"
+      },
+      "paint": {}
+    },
+    {
+      "id": "uwss-fire-hydrant",
+      "type": "symbol",
+      "source": "uwssassets",
+      "source-layer": "fire_hydrant",
+      "minzoom": 12,
+      "layout": {
+        "icon-image": "firehydrant"
+      },
+      "paint": {}
+    },
+    {
+      "id": "uwss-water-meter",
+      "type": "symbol",
+      "source": "uwssassets",
+      "source-layer": "water_meter",
+      "minzoom": 12,
+      "layout": {
+        "icon-image": "meter"
+      },
+      "paint": {}
+    },
+    {
+      "id": "uwss-customers",
+      "type": "symbol",
+      "source": "uwssassets",
+      "source-layer": "customers",
+      "minzoom": 15,
+      "layout": {
+        "icon-image": "household"
+      },
+      "paint": {}
+    },
+    {
+      "id": "uwss_pipeline_annotation",
+      "type": "symbol",
+      "source": "uwssassets",
+      "source-layer": "pipeline",
+      "minzoom": 14,
+      "layout": {
+        "text-field": [
+          "concat",
+          [
+            "get",
+            "Pipeline_Category"
+          ],
+          " ",
+          [
+            "get",
+            "Pipeline_Material"
+          ],
+          " ",
+          [
+            "get",
+            "Diameter"
+          ]
+        ],
+        "text-font": [
+          "Roboto Regular"
+        ],
+        "symbol-placement": "line-center",
+        "text-size": 14
+      },
+      "paint": {
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
+      }
     },
     {
       "id": "pipeline_annotation",

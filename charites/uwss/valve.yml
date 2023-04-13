@@ -1,0 +1,21 @@
+id: uwss-valve
+type: symbol
+source: uwssassets
+source-layer: valve
+minzoom: 12
+layout:
+  icon-image: valve
+  text-field:
+    - to-string
+    - - get
+      - chamber_type
+  text-font:
+    - Roboto Regular
+  text-size: 12
+  text-anchor: left
+  text-offset:
+    - 1
+    - 0
+paint:
+  text-halo-color: '#ffffff'
+  text-halo-width: 1

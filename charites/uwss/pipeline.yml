@@ -1,0 +1,9 @@
+id: uwss_pipeline
+type: line
+source: uwssassets
+source-layer: pipeline
+minzoom: 9
+layout: {}
+paint:
+  line-color: hsl(240, 100%, 50%)
+  line-width: 1.5
