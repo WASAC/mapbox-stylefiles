@@ -6,4 +6,4 @@ minzoom: 9
 layout: {}
 paint:
   line-color: hsl(240, 100%, 50%)
-  line-width: 1.5
+  line-width: 1
