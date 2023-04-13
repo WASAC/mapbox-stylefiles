@@ -7289,7 +7289,7 @@
       "type": "line",
       "source": "assets",
       "source-layer": "pipeline",
-      "minzoom": 10,
+      "minzoom": 9,
       "layout": {},
       "paint": {
         "line-color": "hsl(240, 100%, 50%)",
