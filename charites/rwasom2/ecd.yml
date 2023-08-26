@@ -1,0 +1,11 @@
+id: ecd
+type: fill
+source: rwasom2
+source-layer: ecd
+minzoom: 11
+layout: {}
+paint:
+  fill-color: rgb(179,191,255)
+  fill-opacity: 0.5
+  fill-outline-color: rgb(10,27,115)
+
