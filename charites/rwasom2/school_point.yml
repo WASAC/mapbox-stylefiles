@@ -1,0 +1,11 @@
+id: school_point
+type: circle
+source: rwasom2
+source-layer: school_point
+minzoom: 11
+layout: {}
+paint:
+  circle-color: rgb(0,170,35)
+  circle-radius: 6
+  circle-stroke-color: rgb(255,255,255)
+  circle-stroke-width: 1

@@ -28,6 +28,9 @@ sources:
     tiles:
       - https://wasac.github.io/uwss-vt/tiles/{z}/{x}/{y}.pbf
     type: vector
+  rwasom2:
+    type: vector
+    url: pmtiles://https://wasac.github.io/rwasom-phase-2-datasets/data.pmtiles
   parcels:
     attribution: ©Rwanda Land Management and Use Authority(RLMUA)
     minzoom: 16
@@ -164,6 +167,10 @@ layers:
   - !!inc/file rwanda/district.yml
   - !!inc/file rwanda/parcels.yml
   - !!inc/file rwanda/parcels_annotation.yml
+  - !!inc/file rwasom2/office.yml
+  - !!inc/file rwasom2/ecd.yml
+  - !!inc/file rwasom2/health_facility.yml
+  - !!inc/file rwasom2/school.yml
   - !!inc/file rwanda/wss.yml
   - !!inc/file rwanda/pipeline.yml
   - !!inc/file rwanda/watersource.yml
@@ -191,6 +198,10 @@ layers:
   - !!inc/file uwss/firehydrant.yml
   - !!inc/file uwss/water_meter.yml
   - !!inc/file uwss/customers.yml
+  - !!inc/file rwasom2/office_point.yml
+  - !!inc/file rwasom2/ecd_point.yml
+  - !!inc/file rwasom2/health_facility_point.yml
+  - !!inc/file rwasom2/school_point.yml
   - !!inc/file osm-bright/poi-level-3.yml
   - !!inc/file osm-bright/poi-level-2.yml
   - !!inc/file osm-bright/poi-level-1.yml
@@ -220,3 +231,7 @@ layers:
   - !!inc/file rwanda/cell-annotation.yml
   - !!inc/file rwanda/village-annotation.yml
   - !!inc/file rwanda/wss-annotation.yml
+  - !!inc/file rwasom2/office_point_annotation.yml
+  - !!inc/file rwasom2/ecd_point_annotation.yml
+  - !!inc/file rwasom2/health_facility_point_annotation.yml
+  - !!inc/file rwasom2/school_point_annotation.yml

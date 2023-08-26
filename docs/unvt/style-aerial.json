@@ -51,6 +51,10 @@
       ],
       "type": "vector"
     },
+    "rwasom2": {
+      "type": "vector",
+      "url": "pmtiles://https://wasac.github.io/rwasom-phase-2-datasets/data.pmtiles"
+    },
     "parcels": {
       "attribution": "©Rwanda Land Management and Use Authority(RLMUA)",
       "minzoom": 16,
@@ -172,6 +176,58 @@
       "paint": {
         "text-halo-color": "#ffffff",
         "text-halo-width": 1
+      }
+    },
+    {
+      "id": "office",
+      "type": "fill",
+      "source": "rwasom2",
+      "source-layer": "office",
+      "minzoom": 11,
+      "layout": {},
+      "paint": {
+        "fill-color": "rgb(255,209,154)",
+        "fill-opacity": 0.5,
+        "fill-outline-color": "rgb(255,138,0)"
+      }
+    },
+    {
+      "id": "ecd",
+      "type": "fill",
+      "source": "rwasom2",
+      "source-layer": "ecd",
+      "minzoom": 11,
+      "layout": {},
+      "paint": {
+        "fill-color": "rgb(179,191,255)",
+        "fill-opacity": 0.5,
+        "fill-outline-color": "rgb(10,27,115)"
+      }
+    },
+    {
+      "id": "health_facility",
+      "type": "fill",
+      "source": "rwasom2",
+      "source-layer": "health_facility",
+      "minzoom": 11,
+      "layout": {},
+      "paint": {
+        "fill-color": "rgb(255,224,250)",
+        "fill-opacity": 0.5,
+        "fill-outline-color": "rgb(155,42,135)"
+      }
+    },
+    {
+      "id": "school",
+      "type": "fill",
+      "source": "rwasom2",
+      "source-layer": "school",
+      "minzoom": 11,
+      "layout": {},
+      "paint": {
+        "fill-color": "rgb(230,254,235)",
+        "fill-opacity": 0.5,
+        "fill-outline-color": "rgb(0,97,20)"
       }
     },
     {
@@ -941,6 +997,62 @@
         "icon-image": "household"
       },
       "paint": {}
+    },
+    {
+      "id": "office_point",
+      "type": "circle",
+      "source": "rwasom2",
+      "source-layer": "office_point",
+      "minzoom": 11,
+      "layout": {},
+      "paint": {
+        "circle-color": "rgb(255,138,0)",
+        "circle-radius": 6,
+        "circle-stroke-color": "rgb(255,255,255)",
+        "circle-stroke-width": 1
+      }
+    },
+    {
+      "id": "ecd_point",
+      "type": "circle",
+      "source": "rwasom2",
+      "source-layer": "ecd_point",
+      "minzoom": 11,
+      "layout": {},
+      "paint": {
+        "circle-color": "rgb(0,37,232)",
+        "circle-radius": 6,
+        "circle-stroke-color": "rgb(255,255,255)",
+        "circle-stroke-width": 1
+      }
+    },
+    {
+      "id": "health_facility_point",
+      "type": "circle",
+      "source": "rwasom2",
+      "source-layer": "health_facility_point",
+      "minzoom": 11,
+      "layout": {},
+      "paint": {
+        "circle-color": "rgb(220,211,0)",
+        "circle-radius": 6,
+        "circle-stroke-color": "rgb(255,255,255)",
+        "circle-stroke-width": 1
+      }
+    },
+    {
+      "id": "school_point",
+      "type": "circle",
+      "source": "rwasom2",
+      "source-layer": "school_point",
+      "minzoom": 11,
+      "layout": {},
+      "paint": {
+        "circle-color": "rgb(0,170,35)",
+        "circle-radius": 6,
+        "circle-stroke-color": "rgb(255,255,255)",
+        "circle-stroke-width": 1
+      }
     },
     {
       "id": "poi-level-3",
@@ -2210,6 +2322,146 @@
       "paint": {
         "text-halo-color": "#ffffff",
         "text-halo-width": 1
+      }
+    },
+    {
+      "id": "office_point_annotation",
+      "type": "symbol",
+      "source": "rwasom2",
+      "source-layer": "office_point",
+      "minzoom": 13,
+      "layout": {
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "facility_name"
+          ]
+        ],
+        "text-font": [
+          "Roboto Regular"
+        ],
+        "text-size": 14,
+        "text-justify": "auto",
+        "text-radial-offset": 0.5,
+        "text-variable-anchor": [
+          "top",
+          "bottom",
+          "left",
+          "right"
+        ],
+        "text-max-width": 8
+      },
+      "paint": {
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0,
+        "text-color": "#1c1c1c"
+      }
+    },
+    {
+      "id": "ecd_point_annotation",
+      "type": "symbol",
+      "source": "rwasom2",
+      "source-layer": "ecd_point",
+      "minzoom": 13,
+      "layout": {
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "facility_name"
+          ]
+        ],
+        "text-font": [
+          "Roboto Regular"
+        ],
+        "text-size": 14,
+        "text-justify": "auto",
+        "text-radial-offset": 0.5,
+        "text-variable-anchor": [
+          "top",
+          "bottom",
+          "left",
+          "right"
+        ],
+        "text-max-width": 8
+      },
+      "paint": {
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0,
+        "text-color": "#1c1c1c"
+      }
+    },
+    {
+      "id": "health_facility_point_annotation",
+      "type": "symbol",
+      "source": "rwasom2",
+      "source-layer": "health_facility_point",
+      "minzoom": 13,
+      "layout": {
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "facility_name"
+          ]
+        ],
+        "text-font": [
+          "Roboto Regular"
+        ],
+        "text-size": 14,
+        "text-justify": "auto",
+        "text-radial-offset": 0.5,
+        "text-variable-anchor": [
+          "top",
+          "bottom",
+          "left",
+          "right"
+        ],
+        "text-max-width": 8
+      },
+      "paint": {
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0,
+        "text-color": "#1c1c1c"
+      }
+    },
+    {
+      "id": "school_point_annotation",
+      "type": "symbol",
+      "source": "rwasom2",
+      "source-layer": "school_point",
+      "minzoom": 13,
+      "layout": {
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "facility_name"
+          ]
+        ],
+        "text-font": [
+          "Roboto Regular"
+        ],
+        "text-size": 14,
+        "text-justify": "auto",
+        "text-radial-offset": 0.5,
+        "text-variable-anchor": [
+          "top",
+          "bottom",
+          "left",
+          "right"
+        ],
+        "text-max-width": 8
+      },
+      "paint": {
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0,
+        "text-color": "#1c1c1c"
       }
     }
   ]

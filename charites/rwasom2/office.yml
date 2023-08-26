@@ -1,0 +1,11 @@
+id: office
+type: fill
+source: rwasom2
+source-layer: office
+minzoom: 11
+layout: {}
+paint:
+  fill-color: rgb(255,209,154)
+  fill-opacity: 0.5
+  fill-outline-color: rgb(255,138,0)
+
