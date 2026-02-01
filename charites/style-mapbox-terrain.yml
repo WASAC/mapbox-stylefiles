@@ -256,7 +256,7 @@ sources:
     minzoom: 8
     maxzoom: 14
     tiles:
-      - https://wasac.github.io/vt/tiles/{z}/{x}/{y}.mvt
+      - https://wasac.github.io/vt/tiles/{z}/{x}/{y}.pbf
     type: vector
   rwanda-dem:
     type: raster-dem
