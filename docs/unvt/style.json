@@ -51,13 +51,7 @@
     },
     "rwanda-dem": {
       "type": "raster-dem",
-      "attribution": "©<a href='http://wasac.rw'>WASAC,Ltd.</a>",
-      "tiles": [
-        "https://wasac.github.io/rw-terrain-webp/tiles/{z}/{x}/{y}.webp"
-      ],
-      "tileSize": 512,
-      "minzoom": 5,
-      "maxzoom": 15
+      "url": "https://tiles.mapterhorn.com/tilejson.json"
     }
   },
   "sprite": "https://wasac.github.io/mapbox-stylefiles/unvt/sprite/sprite",
@@ -74,11 +68,10 @@
       "id": "hillshade",
       "type": "hillshade",
       "source": "rwanda-dem",
-      "minzoom": 6,
       "layout": {},
       "paint": {
         "hillshade-accent-color": "#5a5a5a",
-        "hillshade-exaggeration": 0.5,
+        "hillshade-exaggeration": 1,
         "hillshade-highlight-color": "#FFFFFF",
         "hillshade-illumination-anchor": "viewport",
         "hillshade-illumination-direction": 335,

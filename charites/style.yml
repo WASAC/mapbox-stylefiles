@@ -40,12 +40,7 @@ sources:
     type: vector
   rwanda-dem:
     type: raster-dem
-    attribution: ©<a href='http://wasac.rw'>WASAC,Ltd.</a>
-    tiles:
-      - https://wasac.github.io/rw-terrain-webp/tiles/{z}/{x}/{y}.webp
-    tileSize: 512
-    minzoom: 5
-    maxzoom: 15
+    url: https://tiles.mapterhorn.com/tilejson.json
 sprite: https://wasac.github.io/mapbox-stylefiles/unvt/sprite/sprite
 glyphs: https://watergis.github.io/font-glyphs/glyphs/{fontstack}/{range}.pbf
 layers:
