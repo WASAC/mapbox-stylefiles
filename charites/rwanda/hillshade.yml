@@ -1,11 +1,10 @@
 id: hillshade
 type: hillshade
 source: rwanda-dem
-minzoom: 6
 layout: {}
 paint:
   hillshade-accent-color: '#5a5a5a'
-  hillshade-exaggeration: 0.5
+  hillshade-exaggeration: 1
   hillshade-highlight-color: '#FFFFFF'
   hillshade-illumination-anchor: viewport
   hillshade-illumination-direction: 335
